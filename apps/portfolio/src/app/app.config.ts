@@ -11,5 +11,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
     provideAnimations(),
-    provideHttpClient()],
+    provideHttpClient()
+  ],
 };
