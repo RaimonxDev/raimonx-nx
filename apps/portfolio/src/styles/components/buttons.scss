@@ -1,0 +1,13 @@
+/* Buttons */
+.btn,
+.btn-sm {
+  @apply font-aspekta text-sm font-medium inline-flex items-center justify-center rounded-full leading-5 whitespace-nowrap transition duration-150 ease-in-out;
+}
+
+.btn {
+  @apply px-4 py-2;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5;
+}
