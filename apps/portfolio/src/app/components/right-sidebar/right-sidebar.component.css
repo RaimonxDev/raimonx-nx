@@ -3,7 +3,7 @@ p > span {
 }
 
 .span-title{
-  @apply text-pri-500 font-bold dark:text-slate-100 hover:text-pri-700 transition-colors ease-out;
+  @apply text-pri-600 font-bold dark:text-slate-100 hover:text-pri-600 transition-colors ease-out;
 }
 .mat-icon {
   height: 18px;
@@ -11,5 +11,5 @@ p > span {
 }
 
 .description{
-  @apply inline-flex items-center gap-1 text-gray-900 dark:text-pri-500 dark:font-bold;
+  @apply inline-flex items-center gap-1 text-gray-900 dark:text-pri-600 dark:font-bold;
 }

@@ -12,7 +12,7 @@ input[type='search']::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-  @apply bg-slate-100 border border-slate-100 focus:border-pri-500 dark:bg-slate-700 dark:border-slate-700 dark:focus:border-pri-500;
+  @apply bg-slate-100 border border-slate-100 focus:border-pri-600 dark:bg-slate-700 dark:border-slate-700 dark:focus:border-pri-600;
 }
 
 .form-input,
@@ -33,7 +33,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .form-checkbox,
 .form-radio {
-  @apply text-pri-500 border-2 rounded-sm;
+  @apply text-pri-600 border-2 rounded-sm;
 }
 
 /* Chrome, Safari and Opera */
