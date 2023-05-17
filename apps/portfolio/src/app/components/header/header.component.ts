@@ -8,4 +8,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  darkModeToggle() {
+    const html = document.getElementsByTagName('html')[0]
+    console.log(html)
+    // add class to html
+    html.classList.toggle('dark')
+
+  }
+
+}
