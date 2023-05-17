@@ -15,7 +15,7 @@ export class RightSidebarComponent {
   toastService: HotToastService = inject(HotToastService)
 
 
-  copyToClipboard() {
-    this.toastService.success('Copied to clipboard')
+  copyToClipboard(value: string) {
+    this.toastService.success(`${value} copied to clipboard!`)
   }
 }

@@ -4,13 +4,13 @@
     <span class="span-title">
       Github:</span> <a class="cursor-pointer" target="_blank" [href]="'https://github.com/raimonxdev'">
       Raimonxdev</a>
-    <mat-icon (click)="copyToClipboard()" class="" [matTooltip]="'copy to clipboard'"
+    <mat-icon (click)="copyToClipboard('url')" class="" [matTooltip]="'copy to clipboard'"
       [cdkCopyToClipboard]="'https://github.com/raimonxdev'" svgIcon="clipboard"></mat-icon>
   </p>
   <p class="description">
     <span class="span-title">Email:</span>
     <a class="cursor-pointer" href="mailto:hi@ramonmartinez.dev">hi@ramonmartinez.dev</a>
-    <mat-icon (click)="copyToClipboard()" class="" [matTooltip]="'copy to clipboard'"
+    <mat-icon (click)="copyToClipboard('email')" class="" [matTooltip]="'copy to clipboard'"
       [cdkCopyToClipboard]="'hi@ramonmartinez.dev'" svgIcon="clipboard"></mat-icon>
   </p>
   <p class="description">
