@@ -1,0 +1,108 @@
+<div class="grid grid-cols-6 grid-rows-6 gap-2 max-h-[600px]">
+
+  <h2 class="col-start-2 col-span-4 row-start-1 row-span-1 text-6xl font-bold text-center">Stack</h2>
+  <!-- angular -->
+  <div class="col-start-3 col-span-2 row-start-3 row-span-2 flex justify-center -rotate-4">
+    <ng-container
+      *ngTemplateOutlet="globes;  context: {$implicit: 'angular',  imageUrl: 'angular.svg', size:'full'}"></ng-container>
+  </div>
+
+  <!-- ts -->
+  <div class="col-start-3 col-span-2 row-start-2 flex justify-center">
+    <ng-container
+      *ngTemplateOutlet="globes;  context: {$implicit: 'typescript',  imageUrl: 'typescript.png'}"></ng-container>
+  </div>
+  <!-- rxjs -->
+  <div class="col-start-2 row-start-3 row-span-2 flex justify-center">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'rxjs',  imageUrl: 'rxjs.png'}"></ng-container>
+  </div>
+  <!-- js -->
+  <div class="col-start-3 col-span-2 row-start-5">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Javascript',  imageUrl: 'js.png'}"></ng-container>
+  </div>
+  <!-- css -->
+  <div class="col-start-5 row-start-5">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Css',  imageUrl: 'css.png'}"></ng-container>
+  </div>
+  <!-- docker -->
+  <div class="col-start-1 row-start-1">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'docker',  imageUrl: 'docker.png'}"></ng-container>
+  </div>
+  <!-- traefik -->
+  <div class="col-start-1 row-start-6">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Traefik',  imageUrl: 'traefik.png'}"></ng-container>
+  </div>
+  <!-- html -->
+  <div class="col-start-2 row-start-5">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'html',  imageUrl: 'html.png'}"></ng-container>
+  </div>
+  <!-- postgres -->
+  <div class="col-start-1 row-start-3">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Postgres',  imageUrl: 'postgres.png'}">
+
+    </ng-container>
+  </div>
+  <!-- react -->
+  <div class="col-start-6 row-start-3">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'react',  imageUrl: 'reactjs.png'}">
+
+    </ng-container>
+  </div>
+  <!-- node -->
+  <div class="col-start-5 row-start-3 row-span-2 flex justify-center">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'node',  imageUrl: 'nodejs.png'}">
+
+    </ng-container>
+  </div>
+  <!-- aws -->
+  <div class="col-start-3 row-start-6">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'aws',  imageUrl: 'aws.png'}">
+
+    </ng-container>
+  </div>
+  <!-- digital ocean -->
+  <div class="col-start-4 row-start-6">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Digital Ocean',  imageUrl: 'digital-ocean.png'}">
+    </ng-container>
+  </div>
+  <!-- Wordpress -->
+  <div class="col-start-6 row-start-1">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'wordpress',  imageUrl: 'wordpress.png'}">
+    </ng-container>
+  </div>
+  <!-- Git -->
+  <div class="col-start-5 row-start-2">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Git',  imageUrl: 'github.png'}">
+
+    </ng-container>
+  </div>
+  <!-- Go -->
+  <div class="col-start-6 row-start-6">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Go',  imageUrl: 'go.png'}">
+
+    </ng-container>
+  </div>
+  <!-- nest -->
+  <div class="col-start-2 row-start-2">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Nest ',  imageUrl: 'nestsjs.svg'}">
+
+    </ng-container>
+  </div>
+
+
+</div>
+
+<ng-template #globes let-name let-imageUrl="imageUrl" let-size="size">
+  <div class="flex flex-col justify-center items-center">
+    <div [ngClass]="{
+      'w-16 h-16' : size === 'small' || !size,
+      'w-20 h-20' : size === 'medium',
+      'w-24 h-24' : size === 'large',
+      'w-full h-full' : size === 'full',
+
+    }" class="rounded-full overflow-hidden">
+      <img [src]="'assets/images/stack/' + imageUrl" alt="Angular" class="w-full h-full">
+    </div>
+    <div class="text-xs text-gray-500">{{name}}</div>
+  </div>
+</ng-template>

@@ -1,0 +1,3 @@
+.parentRotate > div {
+  @apply -rotate-45
+}
