@@ -94,16 +94,16 @@
 </div>
 
 <ng-template #globes let-name let-imageUrl="imageUrl" let-size="size" let-customClass="customClass">
-  <div class="flex flex-col justify-center items-center">
+  <div class="flex flex-col justify-center items-center group ">
     <div [ngClass]="{
       'w-16 h-16' : size === 'small' || !size,
       'w-20 h-20' : size === 'medium',
       'w-24 h-24' : size === 'large',
       'w-full h-full' : size === 'full',
       customClass: customClass
-    }" class="overflow-hidden">
+    }" class="overflow-hidden group-hover:scale-105 group-hover:-translate-y-4 ease-out transition-all">
       <img [src]="'assets/images/stack/' + imageUrl" alt="Angular" class="w-full h-full object-contain">
     </div>
-    <p class="text-sm text-gray-500 dark:text-slate-100 capitalize font-bold">{{name}}</p>
+    <p class="group-hover:text-pri-500 text-sm text-gray-500 dark:text-slate-100 capitalize font-bold">{{name}}</p>
   </div>
 </ng-template>

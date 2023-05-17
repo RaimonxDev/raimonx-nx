@@ -1,4 +1,5 @@
 const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const colors = require('tailwindcss/colors');
 const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
@@ -10,6 +11,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        pri: {
+          ...colors.violet
+        }
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         aspekta: ['Aspekta', 'sans-serif'],
