@@ -1,6 +1,6 @@
 <div class="grid grid-cols-6 grid-rows-6 gap-2 max-h-[600px]">
 
-  <h2 class="col-start-2 col-span-4 row-start-1 row-span-1 text-6xl font-bold text-center">Stack</h2>
+  <h2 class="col-start-2 col-span-4 row-start-1 row-span-1 text-6xl font-bold text-center">STACK</h2>
   <!-- angular -->
   <div class="col-start-3 col-span-2 row-start-3 row-span-2 flex justify-center -rotate-4">
     <ng-container
@@ -44,7 +44,7 @@
   </div>
   <!-- react -->
   <div class="col-start-6 row-start-3">
-    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'react',  imageUrl: 'reactjs.png'}">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'react',  imageUrl: 'react.png'}">
 
     </ng-container>
   </div>
@@ -56,7 +56,8 @@
   </div>
   <!-- aws -->
   <div class="col-start-3 row-start-6">
-    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'aws',  imageUrl: 'aws.png'}">
+    <ng-container
+      *ngTemplateOutlet="globes;  context: {$implicit: 'aws',  imageUrl: 'aws.png', customClass: 'rounded-full bg-gray-50'}">
 
     </ng-container>
   </div>
@@ -78,7 +79,7 @@
   </div>
   <!-- Go -->
   <div class="col-start-6 row-start-6">
-    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Go',  imageUrl: 'go.png'}">
+    <ng-container *ngTemplateOutlet="globes;  context: {$implicit: 'Go',  imageUrl: 'goland.png', size: 'small'}">
 
     </ng-container>
   </div>
@@ -92,17 +93,17 @@
 
 </div>
 
-<ng-template #globes let-name let-imageUrl="imageUrl" let-size="size">
+<ng-template #globes let-name let-imageUrl="imageUrl" let-size="size" let-customClass="customClass">
   <div class="flex flex-col justify-center items-center">
     <div [ngClass]="{
       'w-16 h-16' : size === 'small' || !size,
       'w-20 h-20' : size === 'medium',
       'w-24 h-24' : size === 'large',
       'w-full h-full' : size === 'full',
-
-    }" class="rounded-full overflow-hidden">
-      <img [src]="'assets/images/stack/' + imageUrl" alt="Angular" class="w-full h-full">
+      customClass: customClass
+    }" class="overflow-hidden">
+      <img [src]="'assets/images/stack/' + imageUrl" alt="Angular" class="w-full h-full object-contain">
     </div>
-    <div class="text-xs text-gray-500">{{name}}</div>
+    <p class="text-sm text-gray-500 dark:text-slate-100 capitalize font-bold">{{name}}</p>
   </div>
 </ng-template>

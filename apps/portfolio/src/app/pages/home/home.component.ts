@@ -6,11 +6,12 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { ProfileOverviewComponent } from '../../components/profile-overview/profile-overview.component';
 import { ArticlesComponent } from '../../components/articles/articles.component';
 import { StackComponent } from '../../components/stack/stack.component';
+import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
 
 @Component({
   selector: 'raimonx-dev-home',
   standalone: true,
-  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent],
+  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent, RightSidebarComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

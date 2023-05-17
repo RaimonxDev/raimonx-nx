@@ -20,6 +20,7 @@
           "apps/portfolio/src/assets"
         ],
         "styles": [
+          "node_modules/@ngneat/hot-toast/src/styles/styles.css",
           "apps/portfolio/src/styles/main.scss",
           "apps/portfolio/src/styles.css"
         ],

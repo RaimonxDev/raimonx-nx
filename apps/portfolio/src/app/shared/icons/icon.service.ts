@@ -16,6 +16,10 @@ export class IconRegistryService {
       "user-circle",
       this._domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/user-circle.svg")
     );
+    this._iconRegistry.addSvgIcon(
+      "clipboard",
+      this._domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/clipboard.svg")
+    );
   }
 
 }

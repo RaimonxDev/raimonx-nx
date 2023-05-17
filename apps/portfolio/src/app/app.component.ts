@@ -5,7 +5,6 @@ import { IconRegistryService } from './shared/icons/icon.service';
 @Component({
   standalone: true,
   imports: [RouterModule],
-  providers: [IconRegistryService],
   selector: 'raimonx-dev-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

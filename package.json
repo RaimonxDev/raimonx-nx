@@ -15,6 +15,8 @@
     "@angular/platform-browser": "~16.0.0",
     "@angular/platform-browser-dynamic": "~16.0.0",
     "@angular/router": "~16.0.0",
+    "@ngneat/hot-toast": "^5.0.1",
+    "@ngneat/overview": "^3.0.0",
     "@nx/angular": "16.1.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
