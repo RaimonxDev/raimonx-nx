@@ -6,12 +6,13 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ProfileOverviewComponent } from '../../components/profile-overview/profile-overview.component';
 import { RouterOutlet } from '@angular/router';
+import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'layout-classic',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent],
+  imports: [CommonModule, RouterOutlet, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, RightSidebarComponent, HeaderComponent],
   templateUrl: './classic-layout.component.html',
   styleUrls: ['./classic-layout.component.css'],
 })

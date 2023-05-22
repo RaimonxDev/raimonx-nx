@@ -13,3 +13,5 @@ p > span {
 .description{
   @apply inline-flex items-center gap-1 text-gray-900 dark:text-pri-600 dark:font-bold;
 }
+
+

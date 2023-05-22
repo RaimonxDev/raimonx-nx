@@ -1,16 +1,21 @@
 <div class="max-w-7xl mx-auto">
+  <raimonx-dev-header></raimonx-dev-header>
   <div class="min-h-screen flex">
     <!-- Side navigation -->
     <raimonx-dev-side-navigation></raimonx-dev-side-navigation>
 
-
-    <main class="grow overflow-hidden px-6">
+    <main class="grow px-6">
       <div class="w-full h-full max-w-[1072px] mx-auto flex flex-col">
-        <router-outlet></router-outlet>
+        <div class="flex-1">
+          <router-outlet></router-outlet>
+        </div>
         <!-- Footer -->
-        <raimonx-dev-footer></raimonx-dev-footer>
+        <raimonx-dev-footer class="flex-0"></raimonx-dev-footer>
       </div>
     </main>
 
+    <div class="md:w-[240px] lg:w-[300px] shrink-0">
+      <raimonx-dev-right-sidebar></raimonx-dev-right-sidebar>
+    </div>
   </div>
 </div>
