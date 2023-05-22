@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       colors: {
         pri: {
-          ...colors.violet
+          ...colors.cyan
         }
       },
       fontFamily: {

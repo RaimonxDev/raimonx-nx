@@ -1,23 +1,26 @@
 <div class="md:sticky md:top-16 space-y-4 px-6 py-4 md:mt-10">
   <h3 class="h3">Contacto</h3>
   <p class="description">
-    <span class="span-title">
-      Github:</span> <a class="cursor-pointer" target="_blank" [href]="'https://github.com/raimonxdev'">
-      Raimonxdev</a>
-    <mat-icon (click)="copyToClipboard('url')" class="" [matTooltip]="'copy to clipboard'"
-      [cdkCopyToClipboard]="'https://github.com/raimonxdev'" svgIcon="clipboard"></mat-icon>
+    <svg (click)="copyToClipboard('url')" [matTooltip]="'copy to clipboard'"
+      [cdkCopyToClipboard]="'https://github.com/raimonxdev'" class=" h-10 w-10 fill-current -ml-2" viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z">
+      </path>
+    </svg>
+    <a class="cursor-pointer span-title -ml-1" target="_blank" [href]="'https://github.com/raimonxdev'">raimonxdev</a>
   </p>
-  <p class="description">
-    <span class="span-title">Email:</span>
-    <a class="cursor-pointer" href="mailto:hi@ramonmartinez.dev">hi@ramonmartinez.dev</a>
-    <mat-icon (click)="copyToClipboard('email')" class="" [matTooltip]="'copy to clipboard'"
-      [cdkCopyToClipboard]="'hi@ramonmartinez.dev'" svgIcon="clipboard"></mat-icon>
+  <p class="description space-x-1">
+    <mat-icon (click)="copyToClipboard('email')" [matTooltip]="'copy to clipboard'"
+      [cdkCopyToClipboard]="'hi@ramonmartinez.dev'" svgIcon="at-symbol"></mat-icon>
+    <a class="cursor-pointer span-title" href="mailto:hi@ramonmartinez.dev">hi@ramonmartinez.dev</a>
   </p>
-  <br>
-  <p class="description">
-    <span class="span-title">Idioma:</span>Español.
+  <p class="description space-x-1">
+    <mat-icon svgIcon="language"></mat-icon>
+    <span class="span-title">Español</span>
   </p>
-  <p class="description">
-    <span class="span-title">País Residente:</span>Chile
+  <p class="description space-x-1">
+    <mat-icon class="stroke-gray-800 dark:stroke-pri-700" svgIcon="map-pin"></mat-icon>
+    <span class="span-title">Chile:</span>
   </p>
 </div>

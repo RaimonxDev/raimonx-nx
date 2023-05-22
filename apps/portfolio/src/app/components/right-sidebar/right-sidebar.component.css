@@ -5,13 +5,10 @@ p > span {
 .span-title{
   @apply text-pri-600 font-bold dark:text-slate-100 hover:text-pri-600 transition-colors ease-out;
 }
-.mat-icon {
-  height: 18px;
-  width: 18px;
-}
+
 
 .description{
-  @apply inline-flex items-center gap-1 text-gray-900 dark:text-pri-600 dark:font-bold;
+  @apply flex items-center text-gray-900 dark:text-pri-600 dark:font-bold;
 }
 
 
