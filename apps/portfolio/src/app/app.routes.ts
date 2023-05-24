@@ -25,5 +25,30 @@ export const appRoutes: Route[] = [
         title: 'About'
       },
     ]
+  },
+
+  {
+    path: '',
+    loadComponent: () => import('./layouts/main-layout.component'),
+    data: {
+      layout: 'content'
+    },
+    children: [
+      {
+        path: 'blog',
+        loadChildren: () => import('./pages/blog/blog.routing'),
+        title: 'Blog'
+      },
+      {
+        path: 'projects',
+        loadChildren: () => import('./pages/projects/projects.routing'),
+        title: 'Projects'
+      }
+    ]
+  },
+
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 ];

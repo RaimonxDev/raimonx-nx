@@ -9,12 +9,16 @@
     </li>
   </ul>
 </raimonx-dev-header>
-<main class="min-h-screen flex w-full">
-  <div class="w-full flex flex-col">
-    <div class="flex-1">
-      <router-outlet></router-outlet>
+<div class="max-w-7xl mx-auto">
+
+  <main class="min-h-screen flex w-full">
+    <div class="w-full flex flex-col">
+      <div class="flex-1">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Footer -->
+      <raimonx-dev-footer class="flex-0"></raimonx-dev-footer>
     </div>
-    <!-- Footer -->
-    <raimonx-dev-footer class="flex-0"></raimonx-dev-footer>
-  </div>
-</main>
+  </main>
+
+</div>

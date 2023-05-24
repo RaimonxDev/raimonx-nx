@@ -14,6 +14,8 @@ export class IconRegistryService {
     { name: "language", path: "assets/icons/language.svg" },
     { name: "map-pin", path: "assets/icons/map-pin.svg" },
     { name: "github", path: "assets/icons/github.svg" },
+    { name: "newspaper", path: "assets/icons/newspaper.svg" },
+    { name: "code-bracket-square", path: "assets/icons/code-bracket-square.svg" },
   ];
 
 
