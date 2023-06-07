@@ -8,4 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header-tesla.component.html',
   styleUrls: ['./header-tesla.component.css'],
 })
-export class HeaderTeslaComponent {}
+export class HeaderTeslaComponent { }
