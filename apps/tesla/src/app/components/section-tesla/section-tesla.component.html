@@ -2,11 +2,17 @@
 
   <div class="relative z-30 h-full flex flex-col">
     <header>
-      <h2 class="text-white pt-48 text-5xl">Experience Tesla</h2>
-      <p class="text-sm text-white mt-2">Schedule a Demo Drive Today</p>
+      <h2 class="text-white pt-48 text-5xl">
+        <ng-content select="[title]"></ng-content>
+      </h2>
+      <p class="text-sm text-white mt-2">
+        <ng-content select="[subtitle]"></ng-content>
+      </p>
     </header>
     <footer class="flex flex-col flex-1 justify-end pb-20">
-      <div>
+      <div class="flex gap-x-2 justify-center">
+        <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+          href="#">Custom Order</a>
         <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
           href="#">Schedule a Demo</a>
       </div>
