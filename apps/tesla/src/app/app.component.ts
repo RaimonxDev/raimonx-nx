@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { HeaderTeslaComponent, HeroTeslaComponent, SectionTeslaComponent } from './components';
+
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [HeroTeslaComponent, SectionTeslaComponent, HeaderTeslaComponent, RouterModule],
   selector: 'raimonx-dev-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
