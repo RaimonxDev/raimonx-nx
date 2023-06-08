@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+export interface Media {
+  url: string;
+  type: 'img' | 'video';
+}
 
 @Component({
   selector: 'raimonx-dev-section-tesla',
@@ -8,4 +13,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './section-tesla.component.html',
   styleUrls: ['./section-tesla.component.css'],
 })
-export class SectionTeslaComponent {}
+export class SectionTeslaComponent {
+  @Input({ required: true }) media: Media = {} as Media;
+}

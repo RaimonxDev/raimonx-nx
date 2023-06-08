@@ -1,13 +1,63 @@
-<raimonx-dev-header-tesla></raimonx-dev-header-tesla>
+<raimonx-dev-header-tesla [currentColor]="currentColor"></raimonx-dev-header-tesla>
 <main class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
   <div class="snap-center">
-    <raimonx-dev-section-tesla>
+    <raimonx-dev-section-tesla data-color="white" observer [threshold]="0.9"
+      (observeElement)="onElementObserved($event)" [media]="{
+      type: 'video',
+      url: 'assets/video.webm'
+    }">
       <ng-container title>Experience Tesla</ng-container>
       <ng-container subtitle>Schedule a Demo Drive Today</ng-container>
     </raimonx-dev-section-tesla>
   </div>
 
   <div class="snap-center">
+    <raimonx-dev-section-tesla data-color="black" observer [threshold]="0.9"
+      (observeElement)="onElementObserved($event)" [media]="{
+              type: 'img',
+              url: 'assets/model-3.webp'
+            }">
+      <ng-container title>Model 3</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+    </raimonx-dev-section-tesla>
   </div>
+
+  <div class="snap-center">
+    <raimonx-dev-section-tesla [media]="{
+              type: 'img',
+              url: 'assets/model-x.webp'
+            }">
+      <ng-container title>Model X</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+    </raimonx-dev-section-tesla>
+  </div>
+
+  <div class="snap-center">
+    <raimonx-dev-section-tesla [media]="{
+              type: 'img',
+              url: 'assets/model-s.webp'
+            }">
+      <ng-container title>Model S</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+    </raimonx-dev-section-tesla>
+  </div>
+  <div class="snap-center">
+    <raimonx-dev-section-tesla [media]="{
+              type: 'img',
+              url: 'assets/model-y.webp'
+            }">
+      <ng-container title>Model Y</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+    </raimonx-dev-section-tesla>
+  </div>
+
 
 </main>
