@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderTeslaComponent, SectionTeslaComponent } from './components';
-import { IntersectionObserverDirective } from './shared/directives/IntersectionObserver.directive';
+import { ChildObserverDirective, RootObserverDirective } from './shared/directives/IntersectionObserver.directive';
+
 
 
 @Component({
   standalone: true,
-  imports: [SectionTeslaComponent, HeaderTeslaComponent, RouterModule, IntersectionObserverDirective],
+  imports: [SectionTeslaComponent, HeaderTeslaComponent, RouterModule, RootObserverDirective, ChildObserverDirective],
   selector: 'raimonx-dev-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

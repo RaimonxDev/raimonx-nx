@@ -1,14 +1,13 @@
-import { Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, inject } from '@angular/core';
+import { AfterViewInit, ContentChildren, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, QueryList, ViewChildren, inject } from '@angular/core';
 
 @Directive(
   {
     // eslint-disable-next-line @angular-eslint/directive-selector
-    selector: '[observer]',
+    selector: '[childObserve]',
     standalone: true
   }
 )
-export class IntersectionObserverDirective implements OnInit, OnDestroy {
-
+export class ChildObserverDirective implements OnInit, OnDestroy {
   elementRef = inject(ElementRef);
   private _rootMargin = '0px';
   private _threshold = 0.1;
@@ -28,7 +27,7 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
     return this._threshold;
   }
 
-  @Output() observeElement: EventEmitter<any> = new EventEmitter();
+  @Output() observeElement: EventEmitter<IntersectionObserverEntry> = new EventEmitter();
 
   private observer!: IntersectionObserver | null;
 
@@ -47,4 +46,34 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.observer?.disconnect();
   }
+
 }
+
+
+
+
+
+@Directive(
+  {
+    // eslint-disable-next-line @angular-eslint/directive-selector
+    selector: '[rootObserver]',
+    standalone: true
+  }
+)
+export class RootObserverDirective implements AfterViewInit {
+  @ContentChildren(ChildObserverDirective, { descendants: true }) childObserver!: QueryList<ChildObserverDirective>;
+
+  @Output() observeElement: EventEmitter<IntersectionObserverEntry> = new EventEmitter()
+
+  ngAfterViewInit(): void {
+    this.childObserver.forEach((child) => {
+      child.observeElement.subscribe(el => {
+        if (el.isIntersecting) {
+          this.observeElement.emit(el);
+        }
+      });
+    });
+  }
+
+}
+

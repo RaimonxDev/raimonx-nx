@@ -1,8 +1,8 @@
 <raimonx-dev-header-tesla [currentColor]="currentColor"></raimonx-dev-header-tesla>
-<main class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
+<main rootObserver (observeElement)="onElementObserved($event)"
+  class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
   <div class="snap-center">
-    <raimonx-dev-section-tesla data-color="white" observer [threshold]="0.9"
-      (observeElement)="onElementObserved($event)" [media]="{
+    <raimonx-dev-section-tesla childObserve data-color="white" [media]="{
       type: 'video',
       url: 'assets/video.webm'
     }">
@@ -12,8 +12,7 @@
   </div>
 
   <div class="snap-center">
-    <raimonx-dev-section-tesla data-color="black" observer [threshold]="0.9"
-      (observeElement)="onElementObserved($event)" [media]="{
+    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
               type: 'img',
               url: 'assets/model-3.webp'
             }">
@@ -25,7 +24,7 @@
   </div>
 
   <div class="snap-center">
-    <raimonx-dev-section-tesla data-color="black" [media]="{
+    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
               type: 'img',
               url: 'assets/model-x.webp'
             }">
@@ -37,7 +36,7 @@
   </div>
 
   <div class="snap-center">
-    <raimonx-dev-section-tesla data-color="black" [media]="{
+    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
               type: 'img',
               url: 'assets/model-s.webp'
             }">
@@ -48,7 +47,7 @@
     </raimonx-dev-section-tesla>
   </div>
   <div class="snap-center">
-    <raimonx-dev-section-tesla data-color="black" [media]="{
+    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
               type: 'img',
               url: 'assets/model-y.webp'
             }">
@@ -58,6 +57,5 @@
       </ng-container>
     </raimonx-dev-section-tesla>
   </div>
-
 
 </main>
