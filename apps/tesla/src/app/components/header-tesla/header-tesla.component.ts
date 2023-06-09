@@ -14,11 +14,12 @@ export class HeaderTeslaComponent implements AfterViewInit {
   private _currentColor = 'white'
   rendere2 = inject(Renderer2);
 
-
   @Input({ required: true })
   set currentColor(value: string) {
-    console.log(value);
-    this._currentColor = value;
+    this._currentColor = value || 'white';
+    if (this.header) {
+      this.updateTextColor(this.currentColor);
+    }
   }
 
   get currentColor(): string {
@@ -26,10 +27,11 @@ export class HeaderTeslaComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    this.updateTextColor(this.currentColor);
+  }
 
-    if (!this.header) return;
-
-    this.rendere2.setProperty(this.header.nativeElement, 'style', `--header-color: ${this.currentColor}`);
+  private updateTextColor(color: string): void {
+    this.rendere2.setProperty(this.header.nativeElement, 'style', `--header-color: ${color} `);
   }
 
 

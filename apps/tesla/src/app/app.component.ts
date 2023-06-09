@@ -16,9 +16,10 @@ export class AppComponent {
   currentColor!: string;
 
   onElementObserved(event: IntersectionObserverEntry): void {
-    console.log(event.isIntersecting);
     if (event.isIntersecting) {
+      console.log(event.isIntersecting);
       this.currentColor = event.target.getAttribute('data-color') || 'white';
+      console.log('current color', this.currentColor);
     }
   }
 }
