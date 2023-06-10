@@ -1,16 +1,38 @@
-import { AfterViewInit, ContentChildren, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, QueryList, ViewChildren, inject } from '@angular/core';
+/* eslint-disable @angular-eslint/directive-selector */
+import {
+  inject,
+  OnInit,
+  AfterViewInit,
+  OnDestroy,
+  ContentChildren,
+  QueryList,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 
 @Directive(
   {
-    // eslint-disable-next-line @angular-eslint/directive-selector
     selector: '[childObserve]',
     standalone: true
   }
 )
 export class ChildObserverDirective implements OnInit, OnDestroy {
-  elementRef = inject(ElementRef);
+  private elementRef = inject(ElementRef);
   private _rootMargin = '0px';
   private _threshold = 0.1;
+  private _root!: ElementRef | null;
+
+  @Input()
+  set rootElement(root: ElementRef | null) {
+    this._root = root;
+  }
+  get rootElement(): ElementRef | null {
+    return this._root;
+  }
+
   @Input()
   set rootMargin(value: string) {
     this._rootMargin = value;
@@ -27,14 +49,19 @@ export class ChildObserverDirective implements OnInit, OnDestroy {
     return this._threshold;
   }
 
-  @Output() observeElement: EventEmitter<IntersectionObserverEntry> = new EventEmitter();
+  @Output() rawElement: EventEmitter<IntersectionObserverEntry> = new EventEmitter();
+  @Output() isIntersecting: EventEmitter<boolean> = new EventEmitter();
 
   private observer!: IntersectionObserver | null;
 
   ngOnInit(): void {
     this.observer = new IntersectionObserver(
-      (entries) => this.observeElement.emit(entries[0]),
+      (entries) => {
+        this.rawElement.emit(entries[0]),
+          this.isIntersecting.emit(entries[0].isIntersecting);
+      },
       {
+        root: this.rootElement ? this.rootElement.nativeElement : null,
         rootMargin: this.rootMargin,
         threshold: this.threshold,
       }
@@ -46,16 +73,9 @@ export class ChildObserverDirective implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.observer?.disconnect();
   }
-
 }
-
-
-
-
-
 @Directive(
   {
-    // eslint-disable-next-line @angular-eslint/directive-selector
     selector: '[rootObserver]',
     standalone: true
   }
@@ -67,7 +87,7 @@ export class RootObserverDirective implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.childObserver.forEach((child) => {
-      child.observeElement.subscribe(el => {
+      child.rawElement.subscribe(el => {
         if (el.isIntersecting) {
           this.observeElement.emit(el);
         }

@@ -1,53 +1,44 @@
-<raimonx-dev-header-tesla [currentColor]="currentColor"></raimonx-dev-header-tesla>
-<main rootObserver (observeElement)="onElementObserved($event)"
+<raimonx-dev-header-tesla SetColor [color]="currentColor" cssNameVar="header-color"></raimonx-dev-header-tesla>
+<main SetColor [color]="currentColor" cssNameVar="section-color" rootObserver
+  (observeElement)="onElementObserved($event)"
   class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
-  <div class="snap-center">
-    <raimonx-dev-section-tesla childObserve data-color="white" [media]="{
+  <!-- hero -->
+  <div id="model-3" class="snap-center">
+    <raimonx-dev-section-tesla childObserve [threshold]="0.9" data-color="white" [media]="{
       type: 'video',
       url: 'assets/video.webm'
     }">
       <ng-container title>Experience Tesla</ng-container>
       <ng-container subtitle>Schedule a Demo Drive Today</ng-container>
+
+      <ng-container footer>
+        <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-base rounded font-medium text-white px-20 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+          href="#">Schedule a Demo</a>
+      </ng-container>
     </raimonx-dev-section-tesla>
   </div>
-
-  <div class="snap-center">
-    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
-              type: 'img',
-              url: 'assets/model-3.webp'
-            }">
+  <!-- Model 3 -->
+  <div id="model-3" class="snap-center">
+    <raimonx-dev-section-tesla childObserve [threshold]="0.9" data-color="black" [media]="{
+                  type: 'img',
+                  url: 'assets/model-3.webp'
+                }">
       <ng-container title>Model 3</ng-container>
       <ng-container subtitle>Starting at $32,740
         After Federal Tax Credit
       </ng-container>
-    </raimonx-dev-section-tesla>
-  </div>
 
-  <div class="snap-center">
-    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
-              type: 'img',
-              url: 'assets/model-x.webp'
-            }">
-      <ng-container title>Model X</ng-container>
-      <ng-container subtitle>Starting at $32,740
-        After Federal Tax Credit
+      <ng-container footer>
+        <ng-container *ngTemplateOutlet="callToAction; context:{$implicit:'order now'}"></ng-container>
+        <ng-container *ngTemplateOutlet="info; context:{$implicit:'demo drive'}"> </ng-container>
       </ng-container>
-    </raimonx-dev-section-tesla>
-  </div>
 
-  <div class="snap-center">
-    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
-              type: 'img',
-              url: 'assets/model-s.webp'
-            }">
-      <ng-container title>Model S</ng-container>
-      <ng-container subtitle>Starting at $32,740
-        After Federal Tax Credit
-      </ng-container>
+
     </raimonx-dev-section-tesla>
   </div>
-  <div class="snap-center">
-    <raimonx-dev-section-tesla childObserve data-color="black" [media]="{
+  <!-- Model Y -->
+  <div id="model-y" class="snap-center">
+    <raimonx-dev-section-tesla childObserve [threshold]="0.9" data-color="black" [media]="{
               type: 'img',
               url: 'assets/model-y.webp'
             }">
@@ -55,7 +46,61 @@
       <ng-container subtitle>Starting at $32,740
         After Federal Tax Credit
       </ng-container>
+      <ng-container footer>
+        <ng-container *ngTemplateOutlet="callToAction; context:{$implicit:'order now'}"></ng-container>
+        <ng-container *ngTemplateOutlet="info; context:{$implicit:'demo drive'}"> </ng-container>
+      </ng-container>
+
     </raimonx-dev-section-tesla>
   </div>
 
+  <!-- model s -->
+  <div id="model-s" class="snap-center">
+    <raimonx-dev-section-tesla childObserve [threshold]="0.9" data-color="black" [media]="{
+                  type: 'img',
+                  url: 'assets/model-s.webp'
+                }">
+      <ng-container title>Model S</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+
+      <ng-container footer>
+        <ng-container *ngTemplateOutlet="callToAction; context:{$implicit:'order now'}"></ng-container>
+        <ng-container *ngTemplateOutlet="info; context:{$implicit:'demo drive'}"> </ng-container>
+      </ng-container>
+
+    </raimonx-dev-section-tesla>
+  </div>
+  <!-- Model X -->
+  <div id="model-x" class="snap-center">
+    <raimonx-dev-section-tesla childObserve [threshold]="0.9" data-color="black" [media]="{
+              type: 'img',
+              url: 'assets/model-x.webp'
+            }">
+      <ng-container title>Model X</ng-container>
+      <ng-container subtitle>Starting at $32,740
+        After Federal Tax Credit
+      </ng-container>
+
+      <ng-container footer>
+        <ng-container *ngTemplateOutlet="callToAction; context:{$implicit:'order now'}"></ng-container>
+        <ng-container *ngTemplateOutlet="info; context:{$implicit:'demo drive'}"> </ng-container>
+      </ng-container>
+    </raimonx-dev-section-tesla>
+  </div>
 </main>
+
+<ng-template #callToAction let-text let-url="url">
+  <a class="bg-[#171a20cc] text-base rounded font-medium
+   text-white px-20 py-2 inline-block transition-colors
+   capitalize
+   " [href]="url ?? '#'">
+    {{text}}</a>
+</ng-template>
+
+<ng-template #info let-text let-url="url">
+  <a class="bg-white text-base rounded font-medium px-20 py-2 transition-colors
+  inline-flex justify-center items-center text-[#171a20cc] capitalize" [href]="url ?? '#'">
+    {{text}}</a>
+</ng-template>

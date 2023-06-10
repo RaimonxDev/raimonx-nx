@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
+import { Component, ElementRef, Input, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Media {
@@ -13,6 +14,12 @@ export interface Media {
   templateUrl: './section-tesla.component.html',
   styleUrls: ['./section-tesla.component.css'],
 })
-export class SectionTeslaComponent {
+export class SectionTeslaComponent implements OnInit {
   @Input({ required: true }) media: Media = {} as Media;
+  elementRef = inject(ElementRef);
+
+  ngOnInit(): void {
+    // console.log(this.elementRef.nativeElement);
+    // console.log(this.media);
+  }
 }

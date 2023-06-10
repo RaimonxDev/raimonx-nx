@@ -1,20 +1,17 @@
-<section class="relative h-screen w-screen overflow-hidden text-center">
+<section class="relative h-screen w-screen overflow-hidden text-center text-[var(--section-color)]">
 
   <div class="relative z-30 h-full flex flex-col">
     <header>
-      <h2 class="text-white pt-48 text-5xl">
+      <h2 class="text-5xl text-current pt-48 font-medium ">
         <ng-content select="[title]"></ng-content>
       </h2>
-      <p class="text-sm text-white mt-2">
+      <p class="text-base text-current mt-2">
         <ng-content select="[subtitle]"></ng-content>
       </p>
     </header>
     <footer class="flex flex-col flex-1 justify-end pb-20">
       <div class="flex gap-x-2 justify-center">
-        <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-          href="#">Custom Order</a>
-        <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-          href="#">Schedule a Demo</a>
+        <ng-content select="[footer]"></ng-content>
       </div>
     </footer>
 
