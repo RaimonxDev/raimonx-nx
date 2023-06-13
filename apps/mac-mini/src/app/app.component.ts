@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { NavGlobalComponent } from './nav/components/nav-global/nav-global.component';
-import { NavLocalComponent } from './nav/components/nav-local/nav-local.component';
+import { NavGlobalComponent } from './components/nav/nav-global/nav-global.component';
+import { NavLocalComponent } from './components/nav/nav-local/nav-local.component';
 
 @Component({
   standalone: true,
