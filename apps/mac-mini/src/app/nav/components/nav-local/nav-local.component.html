@@ -1,0 +1,27 @@
+<div
+  class="flex w-full sticky top-0 text-white/80 bg-[var(--bg-nav-global)] h-[var(--nav-local-height)] backdrop-blur-sm">
+  <div class="flex items-center justify-between w-full px-[22px] text-[12px] text-white/80">
+    <!-- Name Product -->
+    <div class="flex-1">
+      <a class="text-white/90 text-[21px] font-semibold" href="#">
+        Mac mini
+      </a>
+    </div>
+    <!-- Nav Local -->
+    <div class="flex-0">
+      <nav>
+        <ul class="flex gap-x-6">
+          <li *ngFor="let item of navLocal;">
+            <a [ngClass]="{
+              'bg-[var(--color-link)] rounded-full px-[11px] py-1': item === 'Comprar',
+            }" class="text-[13px] tracking-[-.01em]" href="#">
+              {{ item }}
+            </a>
+
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</div>
