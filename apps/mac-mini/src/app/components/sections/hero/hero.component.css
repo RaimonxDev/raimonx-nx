@@ -1,1 +1,88 @@
+.hero-image-container{
+  --p-width: 1440px;
+  --p-height: 466px;
+  width: var(--p-width);
+  height: var(--p-height);
+  margin: 0 auto;
+  right: 50%;
+  margin-left: 20px;
+}
 
+
+/* Animaciones */
+.overview1 {
+  opacity: 0;
+  animation: fadeIn .7s ease-in-out 2.15s forwards;
+}
+
+.overview2 {
+  opacity: 0;
+  animation: fadeIn .7333333333s ease-in-out 3.3833333333s forwards;
+}
+
+.overview3 {
+  animation: fadeIn 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) .5s forwards, fadeOut 1s ease-out 2.15s forwards, zIndexOut 0s 2.85s forwards, zIndexIn 0s 4.1161666667s forwards, fadeIn .8333333333s ease-in-out 4.5166666667s forwards;
+}
+
+
+.hero-headline {
+  margin-top: 16px;
+  padding-bottom: 12px;
+  background: radial-gradient(#eff1ff, black 80%);
+  background-position: 50% 75%;
+  background-size: 150% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typography-hero-headline {
+  line-height: 1.0416666667;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.hero-mac-mini {
+  --fontSize : 1.5rem;
+  color: #fff;
+  font-size: var(--fontSize);
+}
+
+@keyframes fadeInCopy {
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes zIndexIn {
+  to {
+    z-index: 1
+  }
+}
+
+@keyframes zIndexOut {
+  to {
+    z-index: -1
+  }
+}

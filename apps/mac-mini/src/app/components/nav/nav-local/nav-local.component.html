@@ -1,5 +1,5 @@
 <div
-  class="flex justify-center w-full sticky top-0 text-white/80 bg-[var(--bg-nav-global)] h-[var(--nav-local-height)] backdrop-blur-sm">
+  class="flex justify-center w-full sticky top-0 text-white/80 bg-[var(--bg-nav-global)] h-[var(--nav-local-height)] backdrop-blur-sm z-20">
   <div
     class="flex items-center justify-between w-full px-[22px] text-[12px] text-white/80  max-w-[var(--max-width-nav)]">
     <!-- Name Product -->
@@ -15,10 +15,10 @@
           <li *ngFor="let item of navLocal;">
             <a [ngClass]="{
               'bg-[var(--color-link)] rounded-full px-[11px] py-1': item === 'Comprar',
+              'hidden md:block': item !== 'Comprar'
             }" class="text-[13px] tracking-[-.01em]" href="#">
               {{ item }}
             </a>
-
           </li>
         </ul>
       </nav>

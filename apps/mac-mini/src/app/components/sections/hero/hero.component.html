@@ -1,6 +1,34 @@
-<section class="relative">
-  <!-- <div class="max-h-[818px]">
-    <img class="w-full" src="assets/hero/hero_static_xlarge.jpg" alt="hero image">
-  </div> -->
-  <img [src]="imagenActual" class="animate-fadeIn" alt="Image" />
+<section class="section-hero-image relative grid overflow-hidden">
+  <div class="relative w-[800px] mx-auto left-[-23%]">
+    <div class="h-96 mx-auto">
+      <img [src]="images[0].src" alt="Image" class="overview1" />
+    </div>
+    <div class="absolute inset-0">
+      <img [src]="images[1].src" class="overview2" alt="Image" />
+    </div>
+    <div class="absolute inset-0">
+      <img [src]="images[2].src" class="overview3 " alt="Image" />
+    </div>
+  </div>
 </section>
+
+
+<div class="relative flex  w-full ">
+  <div class="text-white/90 mx-auto">
+    <div class="hero-headline text-center">
+      <h1 class="hero-mac-mini text-white/90">Mac mini</h1>
+      <h2 class="text-white font-bold typography-hero-headline">Más agallas.<br> Más posibilidades.</h2>
+    </div>
+    <div class="text-center">
+      <p class="hero-copy typography-quote-reduced">El Mac&nbsp;mini es pequeño, pero cada vez viene mejor armado <br
+          class="small-hide medium-hide">para no dejarse intimidar por proyectos gigantes. El chip&nbsp;M2 te permite
+        <br class="small-hide medium-hide">realizar varias tareas a una velocidad vertiginosa. Y el M2&nbsp;Pro <br
+          class="small-hide medium-hide">aborda cargas de trabajo monumentales con una agilidad nunca antes <br
+          class="small-hide medium-hide">vista, ya que por primera vez se integra un chip de nivel pro a un <br
+          class="small-hide medium-hide">Mac&nbsp;mini. Además, su amplia variedad de puertos le da la versatilidad <br
+          class="small-hide medium-hide">para conectarle lo que necesites. Tu computador tendrá una <br
+          class="small-hide medium-hide">actuación deslumbrante, sea cual sea el chip que&nbsp;elijas.
+      </p>
+    </div>
+  </div>
+</div>
