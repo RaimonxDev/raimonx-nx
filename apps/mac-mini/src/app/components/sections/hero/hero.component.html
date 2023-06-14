@@ -1,33 +1,40 @@
-<section class="section-hero-image relative grid overflow-hidden">
-  <div class="relative w-[800px] mx-auto left-[-23%]">
-    <div class="h-96 mx-auto">
-      <img [src]="images[0].src" alt="Image" class="overview1" />
-    </div>
-    <div class="absolute inset-0">
-      <img [src]="images[1].src" class="overview2" alt="Image" />
-    </div>
-    <div class="absolute inset-0">
-      <img [src]="images[2].src" class="overview3 " alt="Image" />
+<section class="relative grid justify-center overflow-hidden -z-10">
+  <div class="w-[720px] md:w-[920px] lg:w-[1440px]">
+    <div class="relative mx-auto">
+      <img [src]="images[0].src" class="overview1 relative lg:w-screen mx-auto" alt="Image hero 1" />
+      <img [src]="images[1].src" class="overview2 absolute inset-0 lg:w-screen mx-auto" alt="Image hero 2" />
+      <img [src]="images[2].src" class="overview3 absolute inset-0 lg:w-screen mx-auto" alt="Image hero static" />
     </div>
   </div>
 </section>
 
 
-<div class="relative flex  w-full ">
-  <div class="text-white/90 mx-auto">
-    <div class="hero-headline text-center">
-      <h1 class="hero-mac-mini text-white/90">Mac mini</h1>
-      <h2 class="text-white font-bold typography-hero-headline">Más agallas.<br> Más posibilidades.</h2>
+<div class="relative w-[87.5%] lg:w-[980px] justify-center -mt-[100px] md:-mt-[150px] lg:-mt-[120px]  mx-auto">
+  <div class="text-white/90">
+    <div class=" hero-headline text-center">
+      <h1 class="text-[24px] md:text-[28px] lg:text-[30px] text-white/90 font-bold">Mac mini</h1>
+      <h2 class="text-[48px] md:text-[72px] lg:text-[96px] text-white font-bold typography-hero-headline">Más
+        agallas.<br> Más posibilidades.</h2>
     </div>
-    <div class="text-center">
-      <p class="hero-copy typography-quote-reduced">El Mac&nbsp;mini es pequeño, pero cada vez viene mejor armado <br
-          class="small-hide medium-hide">para no dejarse intimidar por proyectos gigantes. El chip&nbsp;M2 te permite
-        <br class="small-hide medium-hide">realizar varias tareas a una velocidad vertiginosa. Y el M2&nbsp;Pro <br
-          class="small-hide medium-hide">aborda cargas de trabajo monumentales con una agilidad nunca antes <br
-          class="small-hide medium-hide">vista, ya que por primera vez se integra un chip de nivel pro a un <br
-          class="small-hide medium-hide">Mac&nbsp;mini. Además, su amplia variedad de puertos le da la versatilidad <br
-          class="small-hide medium-hide">para conectarle lo que necesites. Tu computador tendrá una <br
-          class="small-hide medium-hide">actuación deslumbrante, sea cual sea el chip que&nbsp;elijas.
+    <div class="text-center text-[24px] md:text-[28px] lg:text-[30px]">
+      <p class="tracking-[.004em]  leading-[1.25] text-[#a1a1a6]">El Mac mini es pequeño, pero cada vez viene mejor
+        armado <br>
+        para no dejarse intimidar por proyectos gigantes. El chip M2 te permite <br>
+        realizar varias tareas a una velocidad vertiginosa. Y el M2 Pro <br>
+        aborda cargas de trabajo monumentales con una agilidad nunca antes
+        vista, ya que por primera vez se integra un chip de nivel pro a un <br>
+        Mac mini. Además, su amplia variedad de puertos le da la versatilidad
+        para conectarle lo que necesites. Tu computador tendrá una
+        actuación deslumbrante, sea cual sea el chip que elijas.
+      </p>
+
+      <p class="text-apple-link text-[21px] mt-8 text-[#2997ff] inline-flex items-center gap-x-1 cursor-pointer
+      ">Ver la presentacion <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+        </svg>
       </p>
     </div>
   </div>

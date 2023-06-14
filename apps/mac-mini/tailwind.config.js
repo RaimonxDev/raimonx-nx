@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'apple-link': 'var(--apple-link)',
+      },
       animation: {
         fadeIn: 'fadeIn 0.7s ease-in-out forwards',
         fadeOut: 'fadeOut 0.78s ease-in-out forwards',

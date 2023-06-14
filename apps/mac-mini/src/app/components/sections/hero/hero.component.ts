@@ -24,18 +24,18 @@ export class HeroComponent implements OnInit {
 
   images = [
     {
-      src: 'assets/hero/hero_1_small.jpeg',
+      src: 'assets/hero/hero_1_large.jpg',
       alt: 'hero-1',
       title: 'hero-1'
     },
     {
 
-      src: 'assets/hero/hero_2_small.jpeg',
+      src: 'assets/hero/hero_2_large.jpg',
       alt: 'hero-2',
       title: 'hero-2'
     },
     {
-      src: 'assets/hero/hero_static_small.jpeg',
+      src: 'assets/hero/hero_static_large.jpg',
       alt: 'static hero',
       title: 'static hero'
     }

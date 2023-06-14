@@ -42,11 +42,6 @@
   letter-spacing: -0.015em;
 }
 
-.hero-mac-mini {
-  --fontSize : 1.5rem;
-  color: #fff;
-  font-size: var(--fontSize);
-}
 
 @keyframes fadeInCopy {
   to {
