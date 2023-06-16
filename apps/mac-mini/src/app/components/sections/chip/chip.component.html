@@ -116,21 +116,20 @@
               <div class="grid-cols-12 ">
                 <!-- bars container -->
                 <div class="grid grid-cols-[minmax(auto,1048px)auto] gap-x-4 gap-y-8 mt-12">
-                  <!-- bar mask -->
-                  <div class="">
-                    <div class="relative rounded-sm h-2">
-                      <hr class="bar bar-1 h-full origin-left border-none rounded-2xl" aria-hidden="true"
-                        style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
-                    </div>
-                    <span class="text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">Mac mini con chip M2
-                      Pro</span>
-                  </div>
-                  <!-- badget number -->
-                  <div class="flex">
-                    <p class="text-[48px] text-[#4698ff] -mt-4 font-medium">
-                      x4,7
-                    </p>
-                  </div>
+
+                  <ng-container
+                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2 Pro', performance : '4,7x' , color: 'badget-color-m2-pro', width: 100, gradient: 'gradient-m2-pro'}"></ng-container>
+                  <ng-container
+                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2', performance : '3,5x' , color: 'badget-color-m2', width: 77, gradient: 'gradient-m2'}"></ng-container>
+
+                  <ng-container
+                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con chip M1', width: 50 , gradient: 'gradient-other'}"></ng-container>
+
+                  <ng-container
+                    *ngTemplateOutlet="bars; context {$implicit: 'iMac de 27 pulgadas con Core i7 y Radeon Pro 5500 XT' , width: 25, gradient: 'gradient-other'}"></ng-container>
+                  <ng-container
+                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con Core i7 (referencia)' , width: 25, gradient: 'gradient-other'}"></ng-container>
+
                 </div>
               </div>
             </div>
@@ -142,3 +141,44 @@
     </div>
   </div>
 </article>
+
+
+<ng-template #bars let-name let-performance="performance" let-color="color" let-width="width"
+  let-gradientClass="gradient">
+  <!-- bar mask -->
+  <div>
+    <div class="relative rounded-sm h-2">
+      <hr [class]="gradientClass" class="bar-pro-animation h-full origin-left border-none rounded-full"
+        aria-hidden="true" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"
+        [ngStyle]="{ '--bar-width': width + '%'  }">
+    </div>
+    <span class="text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">
+      {{name}}</span>
+  </div>
+  <!-- badget number -->
+  <div *ngIf="performance" class="flex">
+    <p [ngClass]="color" class="text-[48px] -mt-4 font-medium">
+      {{performance}}
+    </p>
+  </div>
+
+
+
+</ng-template>
+
+<!-- bar mask -->
+<!-- <div class="">
+  <div class="relative rounded-sm h-2">
+    <hr class="bar-m2 bar-animation h-full origin-left border-none rounded-2xl" aria-hidden="true"
+      style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+  </div>
+  <span class="text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">Mac mini con chip M2
+    Pro</span>
+</div> -->
+
+<!-- badget number -->
+<!-- <div class="flex">
+  <p class="text-[48px] text-[#4698ff] -mt-4 font-medium">
+    x4,7
+  </p>
+</div> -->
