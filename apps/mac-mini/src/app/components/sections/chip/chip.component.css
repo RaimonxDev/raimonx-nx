@@ -1,9 +1,21 @@
 .typography-chips-headline {
-  font-size: 80px;
+  font-size: 40px;
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: -0.015em;
 }
+
+@media (min-width: 767px) {
+  .typography-chips-headline {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography-chips-headline {
+    font-size: 80px;
+  }
+}
+
 
 .gradient-container {
   position: absolute;
@@ -21,10 +33,18 @@
   position: absolute;
   top: 0%;
   left: 0;
-  height: 30%;
+  height: 10%;
   background-image: linear-gradient(180deg, black, transparent);
   width: 100%;
 }
+
+@media screen and (min-width: 767px) {
+  .gradient-container::before {
+    height: 20%;
+  }
+}
+
+
 .gradient-container::after {
   content: "";
   position: absolute;
@@ -49,11 +69,17 @@
 }
 
 .typography-badge-caption {
-  font-size: 28px;
+  font-size: 21px;
   line-height: 1.1428571429;
   font-weight: 500;
   letter-spacing: .007em;
 }
+@media screen and (min-width: 767px) {
+  .typography-badge-caption {
+    font-size: 28px;
+  }
+}
+
 
 .learn-more{
   --rounded-button : 999px;
@@ -73,12 +99,20 @@
   border: 2px solid transparent;
   box-sizing: initial;
   outline: none;
-  padding: 14px 20px;
-  font-size: 21px;
+  padding: 12px 14px;
+  font-size: 17px;
   line-height: 1.381002381;
   font-weight: 600;
   letter-spacing: .011em;
   border-radius: var(--rounded-button)
+}
+
+
+@media screen and (min-width : 767px) {
+  .button-learn-more {
+    font-size: 21px;
+    padding: 14px 32px;
+  }
 }
 
 .button-learn-more:hover {
@@ -131,13 +165,10 @@
   color : #4698ff
 }
 
-.bar-pro-animation {
-  --bar-width : 0%;
-  animation: animationBar 2s ease-in-out infinite;
-  width: var(--bar-width);
-}
 .bar-animation {
-  animation: animationBarM2 2s ease-in-out infinite;
+  --bar-width : 0%;
+  animation: animationBar 2s ease-in-out forwards;
+  width: var(--bar-width);
 }
 
 @keyframes animationBar {

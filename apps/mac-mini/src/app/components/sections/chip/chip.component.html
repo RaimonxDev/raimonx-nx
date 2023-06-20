@@ -1,6 +1,6 @@
-<article class="pt-28 text-center text-white/90 overflow-hidden">
+<article class="pt-20 md:pt-28 text-center text-white/90 overflow-hidden">
   <header class="relative pb-4 ">
-    <div class="w-[87.5%] lg:w-[980px] mx-auto pt-24">
+    <div class="w-[87.5%] lg:w-[980px] mx-auto pt-12 lg:pt-24">
 
       <p class="typography-chips-headline">Con los superpoderes <br>
         de los chips</p>
@@ -8,10 +8,10 @@
       <div class="gradient-container"></div>
 
       <!-- CHIPS -->
-      <div class="flex justify-center -mt-4 text-[19px] font-bold">
+      <div class="flex justify-center -mt-4 text-[14px] lg:text-[19px] font-bold">
         <div>
           <img src="assets/chips/m2_large_2x.png" alt="">
-          <ul class="-mt-10 mx-auto">
+          <ul class="-mt-2 lg:-mt-10 mx-auto">
             <li class="descriptions_chips bg-chip-m2">CPU de 8 núcleos</li>
             <li class="descriptions_chips bg-chip-m2">GPU de 10 núcleos</li>
             <li class="descriptions_chips bg-chip-m2">Hasta 24 GB de memoria unificada</li>
@@ -21,7 +21,7 @@
         </div>
         <div>
           <img src="assets/chips/m2_pro_large_2x.png" alt="">
-          <ul class="-mt-10 mx-auto">
+          <ul class="-mt-2 lg:-mt-10 mx-auto">
             <li class="descriptions_chips bg-chip-m2-pro">CPU de hasta 12 núcleos</li>
             <li class="descriptions_chips bg-chip-m2-pro">GPU de hasta 19 núcleos</li>
             <li class="descriptions_chips bg-chip-m2-pro">Hasta 32 GB de memoria unificada</li>
@@ -42,11 +42,11 @@
       <!-- Conoce mas -->
     </div>
 
-    <div class="learn-more mx-auto mt-20 mb-44">
+    <div class="learn-more mt-16 lg:mt-20 mb-24 lg:mb-44 mx-auto">
       <button class="button-learn-more">
-        <span class="content-button inline-flex gap-x-2 items-center"> Conoce el M2 y el M2 Pro por dentro <svg
-            class="group-hover:text-black h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor">
+        <span class="content-button inline-flex gap-x-2"> Conoce el M2 y el M2 Pro por dentro <svg
+            class="group-hover:text-black w-4 h:4 md:h-6 md:w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg></span>
       </button>
@@ -54,20 +54,21 @@
 
   </header>
   <div class="grid max-w-[1390px] gap-6 px-6 grid-cols-12 mx-auto">
-    <div class="gradient-speed col-span-12 rounded-[30px] flex flex-col min-h-[700px]">
-      <header class="relative p-10">
+    <div class="gradient-speed col-span-12 rounded-[30px] flex flex-col min-h-[700px] pb-10">
+      <header class="relative px-6 lg:px-10 py-6 lg:py-10">
         <h3 class="text-[#f5f5f7] block text-start text-[21px]">Velocidad y capacidad</h3>
       </header>
 
       <div class="relative flex-1 text-start">
-        <div class="px-10">
-          <p class="text-[32px] tracking-[.004em]">Comparado con el Mac mini con procesador Intel
+        <div class="px-6 lg:px-10">
+          <p class=" text-[28px] lg:text-[32px] tracking-[.004em]">Comparado con el Mac mini con procesador Intel
           </p>
 
           <div class="mt-10">
             <!-- tab list -->
-            <div class="overflow-x-auto sm:overflow-x-hidden whitespace-nowrap md:whitespace-normal">
-              <ul class="[&_li]:inline-block text-[32px] text-[#a1a1a6] [&_span]:mx-[0.2em]">
+            <div class="w-full">
+              <ul
+                class="overscroll-contain-x-scroll lg:overflow-x-hidden overflow-y-hidden whitespace-nowrap md:whitespace-normal [&_li]:inline-block text-[28px] lg:text-[32px] text-[#a1a1a6] [&_span]:mx-[0.2em]">
                 <li>
                   <a class="hover:border-b-2" href="">
                     Edición de fotos
@@ -111,11 +112,13 @@
 
 
             <div class="mt-16">
-              <p class="text-[28px] text-[f5f5f7]">Más velocidad en el uso de filtros y funciones en Photoshop</p>
+              <p class="text-[24px] lg:text-[28px] text-[f5f5f7]">Más velocidad en el uso de filtros y funciones en
+                Photoshop</p>
 
               <div class="grid-cols-12 ">
                 <!-- bars container -->
-                <div class="grid grid-cols-[minmax(auto,1048px)auto] gap-x-4 gap-y-8 mt-12">
+                <div
+                  class="grid grid-cols-[minmax(auto,750px)auto] lg:grid-cols-[minmax(auto,1048px)auto] gap-x-4 gap-y-8 mt-12">
 
                   <ng-container
                     *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2 Pro', performance : '4,7x' , color: 'badget-color-m2-pro', width: 100, gradient: 'gradient-m2-pro'}"></ng-container>
@@ -123,19 +126,16 @@
                     *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2', performance : '3,5x' , color: 'badget-color-m2', width: 77, gradient: 'gradient-m2'}"></ng-container>
 
                   <ng-container
-                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con chip M1', width: 50 , gradient: 'gradient-other'}"></ng-container>
+                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con chip M1', width: 30 , gradient: 'gradient-other'}"></ng-container>
 
                   <ng-container
-                    *ngTemplateOutlet="bars; context {$implicit: 'iMac de 27 pulgadas con Core i7 y Radeon Pro 5500 XT' , width: 25, gradient: 'gradient-other'}"></ng-container>
+                    *ngTemplateOutlet="bars; context {$implicit: 'iMac de 27 pulgadas con Core i7 y Radeon Pro 5500 XT' , width: 55, gradient: 'gradient-other'}"></ng-container>
                   <ng-container
-                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con Core i7 (referencia)' , width: 25, gradient: 'gradient-other'}"></ng-container>
-
+                    *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con Core i7 (referencia)' , width: 15, gradient: 'gradient-other'}"></ng-container>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -143,42 +143,23 @@
 </article>
 
 
-<ng-template #bars let-name let-performance="performance" let-color="color" let-width="width"
+<ng-template #bars let-name let-performance="performance" let-color="color" let-width="width" let-noBadget="noBadget"
   let-gradientClass="gradient">
   <!-- bar mask -->
   <div>
-    <div class="relative rounded-sm h-2">
-      <hr [class]="gradientClass" class="bar-pro-animation h-full origin-left border-none rounded-full"
+    <div class="relative rounded-sm h-2 ">
+      <!-- bar-pro-animation -->
+      <hr [class]="gradientClass" class="col-span-2 h-full origin-left border-none rounded-full bar-animation"
         aria-hidden="true" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"
         [ngStyle]="{ '--bar-width': width + '%'  }">
     </div>
-    <span class="text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">
+    <span class="text-[17px] lg:text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">
       {{name}}</span>
   </div>
   <!-- badget number -->
-  <div *ngIf="performance" class="flex">
-    <p [ngClass]="color" class="text-[48px] -mt-4 font-medium">
+  <div class="flex">
+    <p [ngClass]="color" class="text-[28px] md:text-[36px] lg:text-[48px] -mt-4 font-medium">
       {{performance}}
     </p>
   </div>
-
-
-
 </ng-template>
-
-<!-- bar mask -->
-<!-- <div class="">
-  <div class="relative rounded-sm h-2">
-    <hr class="bar-m2 bar-animation h-full origin-left border-none rounded-2xl" aria-hidden="true"
-      style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
-  </div>
-  <span class="text-[19px] pt-3 font-normal inline-block tracking-[-0.022em]">Mac mini con chip M2
-    Pro</span>
-</div> -->
-
-<!-- badget number -->
-<!-- <div class="flex">
-  <p class="text-[48px] text-[#4698ff] -mt-4 font-medium">
-    x4,7
-  </p>
-</div> -->
