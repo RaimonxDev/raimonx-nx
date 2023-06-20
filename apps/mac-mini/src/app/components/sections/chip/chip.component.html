@@ -117,13 +117,12 @@
 
               <div class="grid-cols-12 ">
                 <!-- bars container -->
-                <div
-                  class="grid grid-cols-[minmax(auto,750px)auto] lg:grid-cols-[minmax(auto,1048px)auto] gap-x-4 gap-y-8 mt-12">
+                <div class="grid grid-cols-[minmax(auto,750px)auto] lg:grid-cols-[minmax(auto,1048px)auto] gap-8 mt-12">
 
                   <ng-container
-                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2 Pro', performance : '4,7x' , color: 'badget-color-m2-pro', width: 100, gradient: 'gradient-m2-pro'}"></ng-container>
+                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2 Pro', performance : 'x4,7' , color: 'badget-color-m2-pro', width: 100, gradient: 'gradient-m2-pro'}"></ng-container>
                   <ng-container
-                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2', performance : '3,5x' , color: 'badget-color-m2', width: 77, gradient: 'gradient-m2'}"></ng-container>
+                    *ngTemplateOutlet="bars; context :{$implicit: 'Mac mini con chip M2', performance : 'x3,5' , color: 'badget-color-m2', width: 77, gradient: 'gradient-m2'}"></ng-container>
 
                   <ng-container
                     *ngTemplateOutlet="bars; context {$implicit: 'Mac mini con chip M1', width: 30 , gradient: 'gradient-other'}"></ng-container>
