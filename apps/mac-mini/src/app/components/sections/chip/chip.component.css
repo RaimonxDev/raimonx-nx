@@ -165,7 +165,7 @@
   color : #4698ff
 }
 
-.bar-animation {
+.animation-bar {
   --bar-width : 0%;
   animation: animationBar 2s ease-in-out forwards;
   width: var(--bar-width);
