@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,10 +12,9 @@ import { HotToastService } from '@ngneat/hot-toast';
   styleUrls: ['./right-sidebar.component.css'],
 })
 export class RightSidebarComponent {
+
   toastService: HotToastService = inject(HotToastService)
-
-
   copyToClipboard(value: string) {
-    this.toastService.success(`${value} copied to clipboard!`)
+    this.toastService.success(`${value} copiado al portapapeles`)
   }
 }
