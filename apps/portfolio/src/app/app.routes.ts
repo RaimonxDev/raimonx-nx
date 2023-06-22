@@ -31,7 +31,7 @@ export const appRoutes: Route[] = [
     path: '',
     loadComponent: () => import('./layouts/main-layout.component'),
     data: {
-      layout: 'content'
+      layout: 'classic'
     },
     children: [
       {

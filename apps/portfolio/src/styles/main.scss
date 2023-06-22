@@ -3,3 +3,11 @@
 @use 'typography';
 @use 'components';
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
