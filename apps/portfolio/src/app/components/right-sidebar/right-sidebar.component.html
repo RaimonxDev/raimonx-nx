@@ -1,49 +1,48 @@
-<div class="md:sticky md:top-24 my-6">
-  <h3 class="h3 mb-2 text-center md:text-start ">Contacto</h3>
+<h3 class="h3 mb-2 text-center text-pri-500 ">Contacto</h3>
+<article class="flex justify-center gap-x-4 w-full">
 
-  <article class="flex justify-center md:justify-start gap-x-4 w-full">
-
-    <div class="flex gap-x-1">
-
-      <button type="button"
-        class="rounded-md bg-black/90 px-4 py-1.5 text-sm font-semibold text-white/90 shadow-sm hover:bg-black/70 inline-flex items-center dark:bg-white/90 dark:text-black/90 ">
-        <a class="inline-flex items-center gap-x-1 " href="mailto:hi@ramonmartinez.dev">
-          Email
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-          </svg>
-        </a>
-        <svg [matTooltip]="'copiar'" [cdkCopyToClipboard]="'hi@ramonmartinez.dev'" (click)="copyToClipboard('Email')"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+  <div class="flex gap-x-1">
+    <button type="button"
+      class="relative rounded-md group bg-white border-black/90 border px-4 py-1.5 text-sm font-semibold text-black/90  hover:text-pri-500 inline-flex items-center dark:bg-white/90 dark:text-black/90 transition-all ease-in">
+      <a class="inline-flex items-center gap-x-1 " href="mailto:hi@ramonmartinez.dev">
+        Email
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
         </svg>
-      </button>
+      </a>
+      <svg [matTooltip]="'copiar'" [cdkCopyToClipboard]="'hi@ramonmartinez.dev'" (click)="copyToClipboard('Email')"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+      </svg>
 
-    </div>
+      <div
+        class="absolute inset-0 bg-black group-hover:translate-y-1 group-hover:translate-x-1 rounded-md -z-10 transition-transform ease-in">
+      </div>
+    </button>
 
-    <div class="flex items-center gap-x-1">
-
-      <button type="button"
-        class="rounded-md bg-black/90 px-4 py-1.5 text-sm font-semibold text-white/90 shadow-sm hover:bg-black/70 inline-flex items-center ">
-        <a class="inline-flex items-center gap-x-1 group" target="_blank" href="https://github.com/RaimonxDev">
-          Github
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-          </svg>
-        </a>
-        <svg [matTooltip]="'copiar'" [cdkCopyToClipboard]="'https://github.com/RaimonxDev'"
-          (click)="copyToClipboard('Github')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+    <button type="button"
+      class="relative group bg-pri-100 rounded-md px-4 py-1.5 text-sm font-semibold text-black/90 shadow-sm inline-flex items-center border border-black">
+      <a class="inline-flex items-center gap-x-1 group" target="_blank" href="https://github.com/RaimonxDev">
+        Github
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
         </svg>
-      </button>
-    </div>
-
-  </article>
+      </a>
+      <svg [matTooltip]="'copiar'" [cdkCopyToClipboard]="'https://github.com/RaimonxDev'"
+        (click)="copyToClipboard('Github')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+      </svg>
+      <div
+        class="absolute inset-0 bg-black group-hover:translate-y-1 group-hover:translate-x-1 rounded-md -z-10 transition-transform ease-in">
+      </div>
+    </button>
+  </div>
+</article>

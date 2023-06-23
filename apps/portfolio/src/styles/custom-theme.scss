@@ -8,12 +8,50 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$custom-cyan: (
+  50: #ecfeff,
+  100: #cffafe,
+  200: #a5f3fc,
+  300: #67e8f9,
+  400: #22d3ee,
+  500: #06b6d4,
+  600: #0891b2,
+  700: #0e7490,
+  800: #155e75,
+  900: #164e63,
+  A100: #cffafe,
+  // Por defecto, A100 será igual a '100'
+  A200: #22d3ee,
+  // Por defecto, A200 será igual a '400'
+  A400: #06b6d4,
+  // Por defecto, A400 será igual a '500'
+  A700: #0e7490,
+  // Por defecto, A700 será igual a '700'
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: rgba(black, 0.87),
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: rgba(black, 0.87),
+      A200: rgba(black, 0.87),
+      A400: white,
+      A700: white,
+    ),
+);
+
+// Define the default theme (same as the example above).
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$portfolio-primary: mat.define-palette(mat.$indigo-palette);
-$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
+$portfolio-primary: mat.define-palette($custom-cyan, 500, 300, 900);
+$portfolio-accent: mat.define-palette(mat.$gray-palette);
 // The warn palette is optional (defaults to red).
 $portfolio-warn: mat.define-palette(mat.$red-palette);
 
