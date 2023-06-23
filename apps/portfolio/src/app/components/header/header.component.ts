@@ -12,7 +12,6 @@ export class HeaderComponent {
 
   darkModeToggle() {
     const html = document.getElementsByTagName('html')[0]
-    console.log(html)
     // add class to html
     html.classList.toggle('dark')
 

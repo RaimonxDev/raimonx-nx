@@ -14,12 +14,7 @@ export interface Media {
   templateUrl: './section-tesla.component.html',
   styleUrls: ['./section-tesla.component.css'],
 })
-export class SectionTeslaComponent implements OnInit {
+export class SectionTeslaComponent {
   @Input({ required: true }) media: Media = {} as Media;
   elementRef = inject(ElementRef);
-
-  ngOnInit(): void {
-    // console.log(this.elementRef.nativeElement);
-    // console.log(this.media);
-  }
 }

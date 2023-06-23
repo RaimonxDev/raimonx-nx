@@ -67,7 +67,26 @@ $portfolio-theme: mat.define-light-theme(
   )
 );
 
+$portfolio-primary-dark: mat.define-palette($custom-cyan, 400, 600, 900);
+$portfolio-accent: mat.define-palette(mat.$gray-palette);
+// The warn palette is optional (defaults to red).
+$portfolio-warn: mat.define-palette(mat.$red-palette);
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $portfolio-primary-dark,
+      accent: $portfolio-accent,
+      warn: $portfolio-warn,
+    ),
+  )
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($portfolio-theme);
+
+// Dark Theme
+.dark {
+  @include mat.all-component-colors($dark-theme);
+}
