@@ -99,7 +99,7 @@
 <ng-template #globes let-name let-imageUrl="imageUrl" let-customClass="customClass">
   <div class="flex flex-col justify-center items-center group ">
     <div [ngClass]="customClass || 'h-16 w-16'"
-      class="overflow-hidden group-hover:scale-105 group-hover:-translate-y-4 ease-out transition-all">
+      class="overflow-hidden group-hover:scale-105 group-hover:-translate-y-1 ease-in transition-all">
       <img [src]="'assets/images/stack/' + imageUrl" [alt]="name" class="object-contain w-full h-full">
     </div>
     <p class="group-hover:text-pri-600 text-sm text-gray-500 dark:text-slate-100 capitalize font-bold">{{name}}</p>
