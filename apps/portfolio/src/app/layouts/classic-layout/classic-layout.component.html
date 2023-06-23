@@ -1,12 +1,20 @@
-<raimonx-dev-header></raimonx-dev-header>
+<raimonx-dev-header>
+  <div class="inline-flex md:hidden flex-1 self-center">
+    <svg (click)="toggleNavigation()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+    </svg>
+  </div>
+</raimonx-dev-header>
 <div class="relative max-w-7xl w-screen mx-auto">
   <div class="min-h-screen flex">
     <!-- Side navigation -->
-    <div class="flex-shrink">
+    <div @slideInOut *ngIf="showNavigation"
+      class="flex-shrink absolute md:relative h-full bg-white dark:bg-black/90 backdrop-blur-lg md:bg-transparent md:shadow-none z-10 shadow-lg">
       <raimonx-dev-side-navigation></raimonx-dev-side-navigation>
     </div>
 
-    <div class="flex flex-col md:flex-row flex-1">
+    <div class="flex flex-col md:flex-row overflow-x-hidden transition-all ease-linear duration-300">
       <main class="grow px-4">
         <div class="w-full h-full max-w-[1072px] mx-auto flex flex-col">
           <div class="flex-1">
@@ -16,6 +24,8 @@
       </main>
     </div>
   </div>
+  <!-- Footer -->
+  <raimonx-dev-footer></raimonx-dev-footer>
 
   <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
     aria-hidden="true">
@@ -30,5 +40,3 @@
     </div>
   </div>
 </div>
-<!-- Footer -->
-<raimonx-dev-footer></raimonx-dev-footer>
