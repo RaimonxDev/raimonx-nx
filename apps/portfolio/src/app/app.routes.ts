@@ -24,16 +24,6 @@ export const appRoutes: Route[] = [
         loadComponent: () => import('./pages/about/about.component'),
         title: 'About'
       },
-    ]
-  },
-
-  {
-    path: '',
-    loadComponent: () => import('./layouts/main-layout.component'),
-    data: {
-      layout: 'classic'
-    },
-    children: [
       {
         path: 'blog',
         loadChildren: () => import('./pages/blog/blog.routing'),
@@ -46,7 +36,6 @@ export const appRoutes: Route[] = [
       }
     ]
   },
-
   {
     path: '**',
     redirectTo: 'home'

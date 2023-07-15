@@ -42,16 +42,16 @@ export class SideNavigationComponent implements OnInit {
       path: 'about',
       icon: 'user-circle'
     },
-    {
-      title: 'Blog',
-      path: 'blog',
-      icon: 'newspaper'
-    },
-    {
-      title: 'Projects',
-      path: 'projects',
-      icon: 'code-bracket-square'
-    }
+    // {
+    //   title: 'Blog',
+    //   path: 'blog',
+    //   icon: 'newspaper'
+    // },
+    // {
+    //   title: 'Projects',
+    //   path: 'projects',
+    //   icon: 'code-bracket-square'
+    // }
 
   ]
   get navigation() {
