@@ -51,9 +51,12 @@
           </svg></span>
       </button>
     </div>
-
   </header>
-  <div class="grid max-w-[1390px] gap-6 px-6 grid-cols-12 mx-auto">
+
+
+  <!-- Speed and capacity -->
+
+  <section class="grid max-w-[1390px] gap-6 px-6 grid-cols-12 mx-auto">
     <div class="gradient-speed col-span-12 rounded-[30px] flex flex-col min-h-[700px] pb-10">
       <header class="relative px-6 lg:px-10 py-6 lg:py-10">
         <h3 class="text-[#f5f5f7] block text-start text-[21px]">Velocidad y capacidad</h3>
@@ -138,9 +141,134 @@
         </div>
       </div>
     </div>
-  </div>
-</article>
+  </section>
 
+  <!-- apps -->
+
+  <section class="relative max-w-[1390px] gap-6 px-6 mx-auto mt-6 ">
+    <div class="gradient-compatilibity rounded-[30px] flex flex-col min-h-[700px] pb-10">
+
+      <div class="flex flex-col lg:flex-row justify-between relative flex-1 text-start">
+        <section class="w-full">
+          <header class="relative px-6 lg:px-10 py-6 lg:py-10">
+            <h3 class="text-[#f5f5f7] block text-start text-[21px]">Velocidad y capacidad</h3>
+          </header>
+
+          <div class="px-6 lg:px-10 py-6 lg:py-10">
+
+            <p class="text-neutral-100 text-[3.50rem] leading-none font-bold">El Mac& mini <br />lo hace.</p>
+
+            <p class="text-neutral-100 text-[1.1rem] leading-7 mt-8 [&_br]:hidden [&_br]:visible">
+              Con macOS & Ventura, las apps que más usas funcionan <br />a una velocidad increíble en tu Mac & mini, desde Microsoft& 365 hasta Adobe & Creative & Cloud y Zoom. <br />Y ya se optimizaron más de 15.000 apps y plug-ins <br />para los chips M2 y M2 & Pro. Ordena todas tus apps <br />y ventanas con Organizador Visual para pasar de <br />una tarea a otra sin perder la concentración. Métete <br />de lleno en sesiones multijugador con SharePlay. <br />O empieza una lista de tareas en el iPhone <br />
+              y retómala en tu Mac & mini sin perder el & hilo.
+            </p>
+          </div>
+        </section>
+
+        <img class="w-full lg:w-2/3" src="assets/chips/compatibility-large_apps.png" alt="compatibility-large_apps">
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Desing and Memory unified -->
+  <section class="relative max-w-[1390px] gap-6 px-6 mx-auto mt-6 ">
+    <div class="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6">
+
+      <!-- desing -->
+      <section class="bg-neutral-900 text-neutral-100 flex flex-col text-[1.06rem] leading-6 min-h-[43.75rem] rounded-3xl overflow-hidden gradient-design w-full lg:w-8/12">
+        <div class="px-10 pt-10 flex flex-col h-full text-start">
+          <h3 class="text-[1.31rem] leading-7 font-medium mb-2">Diseño</h3>
+          <p class="text-[1.19rem] leading-7 mt-3.5">Gracias al rendimiento y la eficiencia de los chips M2 y M2& Pro de Apple, el Mac& mini <br />supera a computadores de escritorio mucho más grandes, sin modificar su& icónico <br />diseño cuadrado de 19,7& cm.</p>
+
+          <div class="items-center flex flex-grow justify-start">
+          <div class="items-start flex flex-col-reverse lg:flex-row-reverse my-16 w-full justify-center">
+            <p class="text-[4.00rem] leading-none font-bold text-start mt-6 lg:mt-0">Un gran <br> computador no <br>tiene por qué ser <br> grande.</p>
+            <div class="-ml-6 mr-8 min-h-[14.25rem] relative self-start lg:self-end">
+              <picture class="h-56 w-32">
+                <source [srcset]="'https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_small.png'" />
+                <source srcset="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_medium.png" />
+                <source srcset="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_large.png" />
+                <img src="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_large.png" class="h-56 object-contain overflow-clip" />
+              </picture>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- memory -->
+
+      <section class="w-full lg:w-4/12  bg-memory flex flex-col text-[1.06rem] leading-6 min-h-[43.75rem] rounded-3xl overflow-hidden" >
+
+        <div class="p-10">
+
+          <h3 class="text-neutral-100 text-[1.31rem] leading-7 font-semibold text-start">Memoria unificada</h3>
+
+          <div class="text-neutral-100 text-[1.06rem] leading-6 pt-16 ">
+            <picture class="pb-5 pl-10">
+              <source srcset="https://www.apple.com/v/mac-mini/s/images/overview/memory_icon__qr9ap7ykbn6u_large.png" />
+              <img src="https://www.apple.com/v/mac-mini/s/images/overview/memory_icon__qr9ap7ykbn6u_large.png" class="h-16 w-16 overflow-clip" />
+            </picture>
+
+            <p class="text-zinc-400 text-[1.45rem] lg:text-[1.75rem] leading-8 mb-3 text-start mt-6"><span class="text-white">Una memoria prodigiosa.</span><br />La memoria unificada del Mac & hace mucho más que la & memoria RAM tradicional. Esta memoria de baja latencia y gran ancho de banda les permite a los chips de Apple transferir datos con más eficiencia, para que todo sea más fluido. Con el chip M2 puedes configurar tu Mac & mini con memoria de 8 & GB a 24 & GB, y con el M2 & Pro puedes elegir entre 16 & GB o 32 & GB de memoria.</p>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </section>
+
+
+    <!-- ssd y privacy -->
+
+  <section class="relative max-w-[1390px] gap-6 px-6 mx-auto mt-6 ">
+    <div class="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6">
+
+      <!-- ssd -->
+      <section class="bg-neutral-900 text-neutral-100 flex flex-col text-[1.06rem] leading-6 min-h-[43.75rem] rounded-3xl overflow-hidden gradient-ssd w-full lg:w-1/2">
+        <div class="px-10 pt-10 flex flex-col h-full text-start">
+          <h3 class="text-[1.31rem] leading-7 font-medium mb-2">Rápido almacenamiento SSD</h3>
+          <p class="text-[1.19rem] leading-7 mt-3.5">El Mac mini viene con almacenamiento SSD flash que puedes ampliar hasta nada menos que 8 TB para guardar todas tus fotos, videos, archivos y apps.8 O sea, hasta cuatro veces más espacio que en la generación anterior.</p>
+
+          <div class="items-center flex flex-grow justify-start">
+          <div class="items-start flex flex-col-reverse lg:flex-row-reverse my-16 w-full justify-center">
+            <p class="text-[4.00rem] leading-none font-bold text-start mt-6 lg:mt-0">Un gran <br> computador no <br>tiene por qué ser <br> grande.</p>
+            <div class="-ml-6 mr-8 min-h-[14.25rem] relative self-start lg:self-end">
+              <picture class="h-56 w-32">
+                <source [srcset]="'https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_small.png'" />
+                <source srcset="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_medium.png" />
+                <source srcset="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_large.png" />
+                <img src="https://www.apple.com/v/mac-mini/s/images/overview/form_factor_endframe__el58huvytpm6_large.png" class="h-56 object-contain overflow-clip" />
+              </picture>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- privacy -->
+
+      <section class="w-full lg:w-1/2 gradient-privacy flex flex-col text-[1.06rem] leading-6 min-h-[43.75rem] rounded-3xl overflow-hidden" >
+
+        <div class="p-10 text-start">
+          <h3 class="text-neutral-100 text-[1.31rem] leading-7 font-semibold text-start">Memoria unificada</h3>
+          <p class="text-[1.19rem] leading-7 mt-3.5">El chip M2 y macOS Ventura traen al Mac mini increíbles funcionalidades de privacidad y seguridad líderes en la industria, como sistemas de protección integrados contra virus y malware. Y el Secure Enclave de última generación ayuda a proteger el sistema y tus datos..</p>
+
+        </div>
+
+      </section>
+
+    </div>
+  </section>
+
+
+
+
+
+</article>
 
 <ng-template #bars let-name let-performance="performance" let-color="color" let-width="width" let-noBadget="noBadget"
   let-gradientClass="gradient">
