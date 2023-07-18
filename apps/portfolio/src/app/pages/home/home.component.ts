@@ -11,7 +11,7 @@ import { RightSidebarComponent } from '../../components/right-sidebar/right-side
 @Component({
   selector: 'raimonx-dev-home',
   standalone: true,
-  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent, RightSidebarComponent],
+  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent, RightSidebarComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

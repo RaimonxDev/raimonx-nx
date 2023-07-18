@@ -18,7 +18,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        aspekta: ['Aspekta', 'sans-serif'],
+        rubik: ['rubik', 'sans-serif'],
         'pt-mono': ['PT Mono', 'monospace'],
       },
       fontSize: {

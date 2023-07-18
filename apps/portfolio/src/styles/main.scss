@@ -4,10 +4,36 @@
 @use 'components';
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+
+:root {
+  --text-quicksan: 'Quicksand', sans-serif;
+  --text-rubik: 'Rubik', sans-serif;
+  --rich-black: #0c0c19;
+  --white: #ffffff;
+  --blue: #1e90ff;
+  --orange: #F76B1C;
+  --box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
-*::before,
-*::after {
-  box-sizing: inherit;
+
+body {
+  font-family: var(--text-rubik);
+  font-size: 1.2rem;
+  color: var(--rich-black);
+  scroll-behavior: smooth;
+  position: relative;
+  background-color: #fcfaf5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+p{
+  font-family: var(--text-quicksan);
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--text-quicksan);
 }
