@@ -1,0 +1,30 @@
+.about-of-me{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 5.75rem;
+  font-size: 600;
+  font-weight: 500;
+  color: #fed7aa;
+  text-align: center;
+}
+
+.about-of-me {
+  font-size: 7.75rem;
+  letter-spacing: -0.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 9.75rem;
+    font-size: 600;
+    font-weight: 500;
+    color: #fed7aa;
+    text-align: center;
+    letter-spacing: -0.94rem;
+  }
+}
