@@ -31,7 +31,7 @@ export default class ProjectsComponent {
       image: 'assets/images/raimonx-dev.png',
       tags: ['angular', 'css', 'html', 'tailwind'],
       deployment: {
-        url: 'https://raimonx.dev',
+        url: 'https://mac-mini.ramonmartinez.dev/',
         githubUrl: 'https://github.com/RaimonxDev/raimonx-nx/tree/main/apps/mac-mini',
       }
     },
@@ -63,6 +63,26 @@ export default class ProjectsComponent {
       deployment: {
         url: 'https://app-pedidos-vya.vercel.app/home',
         githubUrl: 'https://github.com/RaimonxDev/app-pedidos-VYA',
+      }
+    },
+    {
+      title: 'Mastic',
+      description: 'Ecommerce creado con Shopify, Para la venta de alimentos para mascotas. Intregado con Mercado Pago',
+      image: 'assets/images/raimonx-dev.png',
+      tags: ['shopify'],
+      deployment: {
+        url: 'https://mastic.cl',
+        githubUrl: '',
+      }
+    },
+    {
+      title: 'Comidas del fin del mundo',
+      description: 'Landing Page creada con bootstrap. Pagina perteneciente a reto Desafio Latam',
+      image: 'assets/images/raimonx-dev.png',
+      tags: ['html', 'css', 'bootstrap'],
+      deployment: {
+        url: 'https://fdsw-github.vercel.app/',
+        githubUrl: '',
       }
     },
 
