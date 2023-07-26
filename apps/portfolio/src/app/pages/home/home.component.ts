@@ -7,11 +7,12 @@ import { ProfileOverviewComponent } from '../../components/profile-overview/prof
 import { ArticlesComponent } from '../../components/articles/articles.component';
 import { StackComponent } from '../../components/stack/stack.component';
 import { RightSidebarComponent } from '../../components/right-sidebar/right-sidebar.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'raimonx-dev-home',
   standalone: true,
-  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent, RightSidebarComponent, FooterComponent],
+  imports: [CommonModule, SideNavigationComponent, HeaderComponent, FooterComponent, ProfileOverviewComponent, ArticlesComponent, StackComponent, RightSidebarComponent, FooterComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 

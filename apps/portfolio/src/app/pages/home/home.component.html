@@ -25,7 +25,7 @@
 
     <p>Gran entusiasta del desarrollo web. Fuertemente enfocado en el framework de Angular</p>
     <button class="view">
-      <a href="#">
+      <a  [routerLink]="['/about']" >
         Ver mas
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -110,7 +110,7 @@
       </div>
 
       <button class="view">
-        <a href="about.html">
+        <a [routerLink]="['/about']" >
           Y mucho mas
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -189,7 +189,7 @@
     </div>
   </div>
   <!-- contact -->
-  <div #contact class="card col-4 section-contact">
+  <div *ngIf="false" #contact class="card col-4 section-contact">
     <h2>Contacto</h2>
       <div class="flex flex-col gap-2 w-full">
 
