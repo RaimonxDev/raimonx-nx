@@ -1,17 +1,207 @@
-<!-- Content -->
-<div class="relative grow md:flex space-y-8 md:space-y-0 md:space-x-8 pb-12">
-  <!-- Middle area -->
-  <div class="grow">
-    <div class="max-w-2xl mx-auto">
-      <section>
-        <raimonx-dev-profile-overview></raimonx-dev-profile-overview>
-      </section>
 
-      <section class="mt-16">
-        <raimonx-dev-stack></raimonx-dev-stack>
-      </section>
+<main class="main-content relative">
+  <!-- name -->
+  <div class="card col-2">
+    <div class="flex flex-col">
+      <div class="avatar">
+        <img src="/assets/images/me.png" alt="Ramon Martinez">
+      </div>
+      <h2 class="ramonMartinez">Hola, Soy Ramon Martinez</h2>
+      <p>Desarrollador Frontend en Angular</p>
+    </div>
+  </div>
+  <!-- about me -->
+  <div class="card">
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-instagram">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+      Sobre mi
+    </h2>
 
+    <p>Gran entusiasta del desarrollo web. Fuertemente enfocado en el framework de Angular</p>
+    <button class="view">
+      <a  [routerLink]="['/about']" >
+        Ver mas
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-right-circle">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 16 16 12 12 8" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg>
+      </a>
+    </button>
+  </div>
+  <!-- projects -->
+  <div class="card">
+
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-code">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>Proyectos
+    </h2>
+    <p>Ver proyectos realizados en la academia de <br> Desafio Latam</p>
+
+
+    <button class="view">
+      <a href="projects.html">
+        Ver mas
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-right-circle">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 16 16 12 12 8" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg>
+      </a>
+    </button>
+
+  </div>
+  <!-- skills -->
+  <div class="card">
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-star">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+      Skills
+    </h2>
+    <p>
+      A lo largo del tiempo he podido desarrollar con las siguientes tecnologias
+    </p>
+
+    <div class="stack">
+      <div>
+        <img class="object-cover" src="/assets/images/stack/angular.svg" alt="angular">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/html.png" alt="html">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/css.webp" alt="css">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/js.webp" alt="js">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/rxjs.webp" alt="rxjs">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/docker.webp" alt="docker">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/github.webp" alt="docker">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/aws.webp" alt="docker">
+      </div>
+      <div>
+        <img class="object-cover" src="/assets/images/stack/typescript.webp" alt="docker">
+      </div>
+
+      <button class="view">
+        <a [routerLink]="['/about']" >
+          Y mucho mas
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-arrow-right-circle">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 16 16 12 12 8" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </a>
+      </button>
     </div>
   </div>
 
-</div>
+  <!-- github -->
+  <div class="card">
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-github">
+        <path
+          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+      </svg>
+      Github
+    </h2>
+    <p>
+      Sigueme para que estes atento a mis ultimos proyectos <br> <br>
+      Podras encontrar todos mis proyectos personales. Asi como mis contribuciones
+    </p>
+    <button class="view">
+      <a target="_blank" href="https://github.com/RaimonxDev">
+        Ir a Github
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-right-circle">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 16 16 12 12 8" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg>
+      </a>
+    </button>
+
+  </div>
+  <!-- education -->
+  <div class="card bg-white col-2">
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-award">
+        <circle cx="12" cy="8" r="7" />
+        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+      </svg>
+      Educacion
+    </h2>
+
+    <div class="education">
+      <ul>
+        <li>
+          <h3>Ensañanza Basica</h3>
+          <p>
+            Escuela Basica Fe y Alegria
+          </p>
+          <p>
+            2005 - 2010
+          </p>
+        </li>
+        <li>
+          <h3>Ensañanza Media Completa</h3>
+          <p>
+            Intitucion Educativa Tecnica Simon Rodriguez
+          </p>
+          <p>
+            2010 - 2014
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- contact -->
+  <div *ngIf="false" #contact class="card col-4 section-contact">
+    <h2>Contacto</h2>
+      <div class="flex flex-col gap-2 w-full">
+
+        <label for="name" class="sr-only">Nombre</label>
+        <input type="text" name="name" id="name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="ingrese su nombre">
+
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" name="email" id="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="you@email.com">
+
+        <textarea class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="" id="" cols="30" rows="2" placeholder="Ingrese su mensaje"></textarea>
+        <button class="contact">Enviar</button>
+      </div>
+  </div>
+
+</main>

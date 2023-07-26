@@ -14,11 +14,12 @@ module.exports = {
       colors: {
         pri: {
           ...colors.cyan
-        }
+        },
+        orange: 'var(--orange)',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        aspekta: ['Aspekta', 'sans-serif'],
+        rubik: ['rubik', 'sans-serif'],
         'pt-mono': ['PT Mono', 'monospace'],
       },
       fontSize: {
@@ -44,8 +45,12 @@ module.exports = {
       },
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 };

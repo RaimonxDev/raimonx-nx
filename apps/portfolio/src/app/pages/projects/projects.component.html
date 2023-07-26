@@ -1,8 +1,52 @@
-<mat-tab-group>
-  <mat-tab label="Proyectos">Proyectos</mat-tab>
-  <mat-tab label="Gits">Gits</mat-tab>
-  <mat-tab label="Componentes">Components</mat-tab>
-</mat-tab-group>
-<a [routerLink]="['/']" class="text-sm font-semibold leading-7 text-pri-700"><span aria-hidden="true">&larr;</span>
-  Back to
-  home</a>
+<div  class="grid grid-cols-1  gap-x-4 gap-y-8 md:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 h-auto">
+
+  <card [ngClass]="{'last:col-span-1 last:md:col-span-2 last:lg:col-span-1' : projects.length % 2 === 1 ,
+ }"  *ngFor="let item of projects" >
+     <svg icon  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-code">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    <ng-container title >{{item.title | titlecase}}</ng-container>
+    <div class="relative flex flex-col h-full">
+      <div *ngIf="false" class="group aspect-h-7 aspect-w-10 w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+        <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+      </div>
+      <p class="pointer-events-none block text-sm font-medium text-gray-500 mt-2 flex-1">{{item.description}}</p>
+
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span *ngFor="let tag of item.tags" class="block rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-900 pointer-events-none ">{{tag}}</span>
+      </div>
+
+      <button [matMenuTriggerData]="item.deployment"  [matMenuTriggerFor]="menu" class="block rounded-md bg-pink-100 px-2 py-1 text-xs font-medium text-pink-700 mr-0 ml-auto mt-4 flex-0 ">
+        Detalles
+      </button>
+    </div>
+  </card>
+
+</div>
+
+<div class="w-full flex flex-col md:flex-row gap-x-4 justify-center mt-8 lg:mt-12">
+  <button class="inline-flex bg-gray-900 text-orange px-4 py-1.5 rounded-lg shadow-md ">
+    <a href="https://gist.github.com/RaimonxDev" target="_blank" >
+      Ver Gists
+    </a>
+  </button>
+  <button class="inline-flex bg-white border-orange border text-orange px-4 py-1.5 rounded-lg shadow-md ">
+    <a href="https://gist.github.com/RaimonxDev" target="_blank" >
+      Ver Articulos propios
+    </a>
+  </button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <ng-template matMenuContent let-url="url" let-github="githubUrl" >
+    <li>
+      <a [href]="url" target="_blank" class="text-gray-700 hover:text-pink-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold">Demo</a>
+    </li>
+    <li *ngIf="github !== '' ">
+      <a [href]="github" target="_blank" class="text-gray-700 hover:text-pink-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold">Ver Codigo</a>
+    </li>
+  </ng-template>
+</mat-menu>

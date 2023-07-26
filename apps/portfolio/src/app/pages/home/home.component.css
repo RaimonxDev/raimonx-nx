@@ -1,0 +1,119 @@
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+ }}
+
+/* En mobil todas las columnas ocupan 1 sola fila */
+.col-1, .col-2, .col-3, .col-4 {
+  grid-column: span 1;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .col-2 {
+    grid-column: span 2;
+  }
+  .col-3 {
+    grid-column: span 3;
+  }
+  .col-4 {
+    grid-column: span 4;
+  }
+}
+
+
+.avatar{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border-radius: 999px;
+}
+.avatar img {
+background-color: #FAD961;
+  background-image: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+  object-fit: cover;
+}
+.ramonMartinez {
+  font-size: 2rem;
+}
+
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card button.view{
+  align-self: end;
+}
+
+button.view a{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.view a:hover{
+  color: var(--orange);
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+
+
+.view:hover{
+  color: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.stack div {
+  height: 2.5rem;
+  width: 2.5rem;
+  overflow: hidden;
+}
+
+.education{
+  margin-top: 1rem;
+}
+.education > ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25Arem;
+  margin-top: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.section-contact > h2 {
+  justify-content: center;
+}
+
+
+
+

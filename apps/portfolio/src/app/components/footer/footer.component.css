@@ -1,0 +1,13 @@
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 75%;
+  margin: 0.75rem auto;
+}
+
+.footer-links {
+ display: flex;
+  gap: 1rem;
+}

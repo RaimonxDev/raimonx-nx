@@ -1,3 +1,8 @@
-<layout-classic *ngIf="layout === 'classic'"></layout-classic>
-<content-layout *ngIf="layout === 'content'"></content-layout>
-<empty-layout *ngIf="layout === 'empty'"></empty-layout>
+<div class="mx-auto max-w-7xl px-7 flex flex-col min-h-screen" >
+
+  <raimonx-dev-header></raimonx-dev-header>
+  <div class="flex flex-col flex-1 relative h-full grow">
+    <router-outlet></router-outlet>
+  </div>
+  <raimonx-dev-footer/>
+</div>

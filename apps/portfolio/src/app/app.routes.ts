@@ -4,15 +4,11 @@ export const appRoutes: Route[] = [
   {
     path: '',
     loadComponent: () => import('./layouts/main-layout.component'),
-    data: {
-      layout: 'classic'
-    },
     children: [
       {
         path: '',
         pathMatch: 'full',
         redirectTo: 'home'
-
       },
       {
         path: 'home',
