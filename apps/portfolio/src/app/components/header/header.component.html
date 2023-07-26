@@ -7,20 +7,13 @@
     </div>
     <ul class="navigation-list ">
       <li>
-        <a [routerLinkActive]="'text-[var(--orange)]'" [routerLink]="['./home']" >Inicio</a>
+        <a [routerLinkActive]="'text-orange'" [routerLink]="['./home']" >Inicio</a>
         </li>
         <li>
-        <a [routerLinkActive]="'text-[var(--orange)]'" [routerLink]="['./about']" >Sobre mi</a>
+        <a [routerLinkActive]="'text-orange'" [routerLink]="['./about']" >Sobre mi</a>
       </li>
       <li>
-        <a [routerLinkActive]="'text-[var(--orange)]'" [routerLink]="['./projects']" >Proyectos</a>
-      </li>
-      <li>
-        <button class="contact">
-          <a href="#">
-            Contacto
-          </a>
-        </button>
+        <a [routerLinkActive]="'text-orange'" [routerLink]="['./projects']" >Proyectos</a>
       </li>
     </ul>
     <!-- menu-mobile -->
@@ -41,22 +34,15 @@
 
 <div *ngIf="menuIsOpen()" @showMenu class="menu-mobile shadow-sm">
   <ul class="flex flex-col border-">
-    <li [routerLinkActive]="'text-[var(--orange)]'" >
+    <li [routerLinkActive]="'text-orange'" >
       <a  [routerLink]="['./home']" >Inicio</a>
     </li>
-    <li [routerLinkActive]="'text-[var(--orange)]'">
+    <li [routerLinkActive]="'text-orange'">
       <a [routerLink]="['./about']" >Sobre mi</a>
     </li>
     <li >
-      <a [routerLinkActive]="'text-[var(--orange)]'"
+      <a [routerLinkActive]="'text-orange'"
       [routerLink]="['./projects']">Proyectos</a>
-    </li>
-    <li>
-      <button class="contact">
-        <a href="#contact">
-          Contacto
-        </a>
-      </button>
     </li>
   </ul>
 </div>

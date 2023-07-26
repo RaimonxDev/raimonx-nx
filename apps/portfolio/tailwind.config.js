@@ -14,7 +14,8 @@ module.exports = {
       colors: {
         pri: {
           ...colors.cyan
-        }
+        },
+        orange: 'var(--orange)',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
