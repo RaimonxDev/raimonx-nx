@@ -1,0 +1,70 @@
+<div class="w-full" #paletteOrigin>
+    <mat-form-field class="flex-auto gap-1 fuse-mat-dense w-full">
+        <input (focus)="openPalette()" (blur)="onTouchCb?.()" class="ml-2" [formControl]="inputColorCtrl" matInput
+            [value]="inputColorValue" autocomplete="off">
+        <div [style.background]="inputColorValue" matPrefix class="h-5 w-5 rounded-md border-2">
+        </div>
+        <button (blur)="onTouchCb?.()" [disabled]="isDisabled" (click)="openPalette()" mat-icon-button matSuffix>
+            <mat-icon [style.color]="inputColorValue" class="icon-size-5"
+                [svgIcon]="'heroicons_outline:color-swatch'"></mat-icon>
+        </button>
+        <mat-hint>
+            <ng-container *ngIf="inputColorCtrl.errors?.['pattern']">
+                <span class="text-red-500">Invalid color</span>
+            </ng-container>
+        </mat-hint>
+    </mat-form-field>
+</div>
+
+<ng-template #paletteColorsPanel>
+    <div
+        class=" inset-y-0 -inset-x-16 static inset-auto overflow-hidden flex flex-col gap-2 bg-white shadow rounded-lg p-4 w-auto ">
+        <div>
+            <ng-container *ngIf="activeCustoms">
+                <p *ngIf="customsColors.length > 0">Your Custom Color</p>
+                <div class="flex w-full gap-2">
+                    <ng-container *ngFor="let custom of customsColors">
+                        <button [ngClass]="{'rounded-full h-7 w-7 ring-2': custom === inputColorValue}"
+                            (click)="selectedColor(custom)"
+                            class="w-6 h-6 rounded shadow-sm border hover:scale-125 transition-all ease-in-out duration-100 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-600 sdark:focus:ring-gray-400  dark:border-0 dark:hover:ring-2 dark:hover:ring-gray-400"
+                            [style.background]="custom">
+                        </button>
+                    </ng-container>
+                </div>
+
+            </ng-container>
+            <ng-container *ngIf="activeHistory">
+                <p *ngIf="historyColors.length > 0">History</p>
+                <div class="flex w-full gap-2 mt-2">
+                    <ng-container *ngFor="let history of historyColors">
+                        <button [ngClass]="{'rounded-full h-7 w-7 ring-2': history === inputColorValue}"
+                            (click)="selectedColor(history)"
+                            class="w-6 h-6 rounded shadow-sm border hover:scale-125 transition-all ease-in-out duration-100 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-600 sdark:focus:ring-gray-400  dark:border-0 dark:hover:ring-2 dark:hover:ring-gray-400"
+                            [style.background]="history">
+                        </button>
+                    </ng-container>
+                </div>
+            </ng-container>
+
+            <input [formControl]="addNewColorCtrl" (keydown.enter)="addNewColor()" (blur)="onTouchCb?.()"
+                class="ml-2 mt-4" placeholder="add new color here" matInput autocomplete="off">
+
+            <span *ngIf="addNewColorCtrl.errors?.['pattern']" class="text-red-500">Invalid color</span>
+            <hr class="my-2">
+
+        </div>
+        <ng-container *ngFor="let color of _paletteColors">
+            <div class="flex gap-3 flex-nowrap ">
+
+                <ng-container *ngFor="let hex of color.values">
+                    <button (click)="selectedColor(hex)" [style.background]="hex"
+                        class=" w-6 h-6 rounded shadow-sm border hover:scale-125 transition-all ease-in-out duration-100 cursor-pointer hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-600 sdark:focus:ring-gray-400  dark:border-0 dark:hover:ring-2 dark:hover:ring-gray-400">
+                    </button>
+
+                </ng-container>
+            </div>
+        </ng-container>
+
+    </div>
+
+</ng-template>

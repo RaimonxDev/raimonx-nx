@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@raimonx-dev/color-palette": ["libs/color-palette/src/index.ts"],
       "@raimonx-dev/directives": ["libs/directives/src/index.ts"]
     }
   },

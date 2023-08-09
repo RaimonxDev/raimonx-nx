@@ -4,11 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from '../../shared/card/card.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgClass, NgFor, NgIf, TitleCasePipe } from '@angular/common';
+import { ColorPaletteComponent } from '@raimonx-dev/color-palette';
 
 @Component({
   selector: 'raimonx-dev-projects',
   standalone: true,
-  imports: [NgIf, NgFor, NgClass, TitleCasePipe, RouterLink, MatButtonModule, MatMenuModule, CardComponent],
+  imports: [NgIf, NgFor, NgClass, TitleCasePipe, RouterLink, MatButtonModule, MatMenuModule, CardComponent, ColorPaletteComponent],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })
